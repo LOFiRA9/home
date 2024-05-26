@@ -3,1075 +3,1365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主页导航</title>
-
+    <title>LOfi 蒸汽机</title>
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="shortcut icon" href="https://gd-hbimg.huaban.com/009803fa54d085a1395379760d71755017e6520d6a7-4GIwcM" type="image/x-icon">
+    
     <style>
         *{
-            text-decoration: none;
-        }
-        body {
-            background-color: #f3f5f7;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .tabs {
-            display: flex;
-            overflow-x: auto;
-            padding: 5px;
-            background-color: rgb(71, 71, 71);
-            color: aliceblue;
-        }
-        .tab {
-            padding: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .tab:hover {
-            background-color: rgb(253, 153, 117);
-        }
-        .content {
-            padding: 20px;
-            border: #181818;
-            
-        }
-        .hidden {
-            display: none;
-        }
+    /* 內减模式 */
+    margin: 0;
+    padding: 0;
+    /* 去掉下划线 */
+    text-decoration: none;
+    list-style: none;
+}
 
-        .class{
-            float: left;
-            display: block;
-            padding: 5px;
-            /* width: 200px; */
-            height: 800px;
-            /* background-color: pink; */
-            /* overflow: scroll; */
-            scrollbar-width: thin;
-        }
+body{
+    background-color: #f3f5f7;
+    background-image: url(https://pic.imgdb.cn/item/65d458b89f345e8d03d63ae9.jpg);
+    background-repeat:no-repeat;
 
-        /* 隐藏滚动条宽高 */
-        .class::-webkit-scrollbar {
-            width: 8px;
-        }
+    /* 背景图片自适应大小 */
+    background-size:cover;
+}
 
-        /* 隐藏滚动条轨道 即透明 */
-        .class::-webkit-scrollbar-track{
-            background-color: transparent;
-        }
-        li{
-            list-style: none;
-            padding: 3px;
-            /* text-align: center; */
-        }
+/* 标题 */
 
-        a{
-            text-align: center;
-            font-size: 15px;
-            color: rgb(70, 70, 70);
-        }
+h1{
+    margin-top: 30px;
+    font-size: 6ex;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 30px;
+}
 
-        .nav{
-            /* float: left; */
-            margin-left: -10px;
-            height: 50px;
-            border: 1px solid #d8d8d8;
-            /* background-color:pink;    */
-        }
+/* 搜索框 */
 
-        .nav li{
-            float: left;
-            margin-right: 5px;
-        }
 
-        .nav li a{
-            display: block;
-            padding: 0 8px;
-            height: 30px;
-            /* line-height: 20px; */
-            /* border-bottom: 2px solid #3d3d3d; */
-            font-size: 14px;
-            color: rgb(10, 164, 215);
-        }
+.found{
+    margin:50px;
+}
 
-        .nav li a:hover{
-            border-bottom: 2px solid rgb(253, 153, 117);
-        }
+form{
+    text-align: center;
+}
+form .text {
+    display: inline-block;
+    border: 0;
+    width: 260px;
+    height: 35px;
+    font-size: 14px;
+    outline: none;
+    border: 2px solid pink;
+}
 
-        h6{
-            width: 200px;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            background-color: rgb(65, 65, 65);
-        }
+form .search {
+    
+    width: 90px;
+    height: 38px;
+    border: 2px solid rgb(255, 136, 156);
+    outline: none;
+    cursor: pointer;
+    /*   cursor: pointer;   鼠标悬停或点击时button时鼠标变成其他图标  */
+    text-align: center;
+    background-color: pink;
+    color: #FFFFFF;
+}
 
+/* 搜索框end */
+
+.center{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.tittle{
+    margin: 30px auto;
+    width: 1400px;
+    height: 100px;
+    background-color: rgba(56, 56, 56, 0.3);
+    border-radius: 20px;
+}
+
+.tittle img{
+    width: 40px;
+    height: 40px;
+}
+
+.center .tittle a{
+    float: left;
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: center;
+    width: 50px;
+    height: 70px;
+    color: #f3f5f7;
+    font-size: 1ex;
+}
+
+.header{
+    float: left;
+    position: relative;
+    margin: 5px;
+    
+}
+
+div .links{
+    width: 450px;
+    height: 180px;
+    display: block;
+    border: 1px dashed #4b4b4b;
+    border-radius: 20px;
+}
+
+h3{
+    height: 30px;
+    width: 450px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2ex;
+    letter-spacing:15px;
+}
+
+.links li{
+    float: left;
+    text-align: center;
+}
+
+.links a{
+    float: left;
+    width: 100px;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+
+/* 网站其他 */
+.tabs {
+    display: flex;
+    overflow-x: auto;
+    padding: 8px;
+    background-color: hwb(0 29% 71% / 0.3);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+.tab {
+    padding: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px dashed #ff8c8c;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.tab:hover {
+    background-color: rgb(253, 153, 117);
+}
+.hidden {
+    display: none;
+}
     </style>
-
+    
     <!-- 统一规定a标签新窗口打开 -->
     <base target="_blank">
 
-    <!-- <link rel="stylesheet" href="./css/index.css"> -->
 </head>
 <body>
-    
-    <!-- 顶部导航 -->
-    <div class="tabs">
-    <div class="tab" onclick="openTab(event, 'tab1')">设计工作</div>
-    <div class="tab" onclick="openTab(event, 'tab1.5')">图片image</div>
-    <div class="tab" onclick="openTab(event, 'tab2')">生活常用</div>
-    <div class="tab" onclick="openTab(event, 'tab3')">数码游戏</div>
-    <div class="tab" onclick="openTab(event, 'tab4')">世界拓展</div>
-    <div class="tab" onclick="openTab(event, 'tab5')">HTML代码</div>
-    <div class="tab" onclick="openTab(event, 'tab6')">翻墙VPN</div>
-    <div class="tab" onclick="openTab(event, 'tab7')">塔罗占卜</div>
-    <div class="tab" onclick="openTab(event, 'tab8')">三维建模</div>
-    <div class="tab" onclick="openTab(event, 'tab9')">大佬基地</div>
-    <div class="tab" onclick="openTab(event, 'tab10')">艺术绘画</div>
+<div class="center">
+
+    <h1>女巫魔法笔记</h1>
+        <div class="found">
+            <form target="_blank" method="get" action="https://cn.bing.com/search?">
+                <input type="text" placeholder="请输入关键词" name="word" class="text" />
+                <input type="submit" value="必应" class="search">
+            </form>
+		</div>
+
+    <div class="tittle">
+
+        <a href="https://www.bilibili.com"><img src="https://gd-hbimg.huaban.com/f93285b25895da7a8e37307305347eaf99d2ca741102-PGD8XE_fw1200webp" alt="">Bilibili</i></a>
+
+        <a href="https://www.douyin.com"><img src="https://gd-hbimg.huaban.com/4b0e07fd4d21fb17ead1d7e0bcb0cd40033b4e26a67-Dtrsun_fw1200webp" alt="">抖音</i></a>
+
+        <a href="https://www.xiaohongshu.com/explore"><img src="https://gd-hbimg.huaban.com/f351f5686d672b4bc996a1fe7c9eb8c85336b76aad2-H4VAEz_fw1200webp" alt="">小红书</i></a>
+
+        <a href="https://weibo.com/u/5514680377/home?wvr=5"><img src="https://gd-hbimg.huaban.com/57e6f748807c47168e7ad951c872d4ac00e7c8a0592-YfOrGR_fw1200webp" alt="">微博</i></a>
+
+        <a href="https://mail.qq.com/cgi-bin/frame_html?sid=q9shVwBys0MRqD1b&from="><img src="https://gd-hbimg.huaban.com/a4b32670d7055e3bdd667fdb0e66f1c441c45786461-XHyKCX_fw1200webp" alt="">QQ邮箱</i></a>
+
+        <a href="https://mail.google.com/mail/u/0/#inbox"><img src="https://gd-hbimg.huaban.com/78e249f964c3237ab1767e7b0cc50b799e376f5741a-jloWcM_fw1200webp" alt="">谷歌邮箱</i></a>
+
+        <a href="https://movie.douban.com"><img src="https://gd-hbimg.huaban.com/32c922d2483fc62cadf8cd7745c368682d6abbc42c6-El9PCj_fw1200webp" alt="">豆瓣电影</i></a>
+
+        <a href="https://www.douban.com/people/153792385/games?action=wish"><img src="https://gd-hbimg.huaban.com/ed347a0b77c23999518f41cf9e5ada677309ceaa5b8-gF1WWO_fw1200webp" alt="">豆瓣游戏</i></a>
+
+        <a href="https://www.apple.com.cn"><img src="https://gd-hbimg.huaban.com/890a845f4669b59d31a599063b235ce25f1f61b2487-2yrk2F_fw1200webp" alt="">Apple</i></a>
+
+        <a href="https://555dyy10.com"><img src="https://gd-hbimg.huaban.com/d4b3a84d245d6bade1396336f14a6014cb2d08505bc-scAoWU_fw1200webp" alt="">555电影</i></a>
+
+        <a href="https://www.taobao.com"><img src="https://gd-hbimg.huaban.com/93d1d93b7fc6394e8424ec6adfcae45ed74b3b2645d-PPXUWH_fw1200webp" alt="">淘宝</i></a>
+
+        <a href="https://pan.baidu.com/disk/main?from=homeFlow#/index?category=all"><img src="https://gd-hbimg.huaban.com/3846d2784acbcf4f9010630cfdd2662ca2c7fc96329-ek47v1_fw1200webp" alt="">百度网盘</i></a>
+
+        <a href="1"><img src="" alt="">-</i></a>
+        <a href="1"><img src="" alt="">-</i></a>
+        <a href="1"><img src="" alt="">-</i></a>
+        <a href="1"><img src="" alt="">-</i></a>
+        
+        
     </div>
 
-<!-- 常用网址 -->
 
-<!-- 常用 -->
-<div class="nav">
-    <ul>
-        <li>常用</li>
-        <li><a href="https://web.wetab.link/?utm_source=cowtransfer">web新主页</a></li>
-        <li><a href="https://xydh.fun/aEMPTYz">女巫魔法笔记</a></li>
-        <li><a href="https://www.xiaohongshu.com/explore">📕 小红书</a></li>
-        <li><a href="https://weibo.com/u/5514680377/home?wvr=5">微博</a></li>
-        <li><a href="https://www.zhihu.com">知乎</a></li>
-        <li><a href="https://tophub.today">🔥今日热榜</a></li>
-        <li><a href="https://www.gzlib.org.cn/">📚广州图书馆</a></li>
-        <li><a href="https://movie.douban.com">豆瓣电影</a></li>
-        <li><a href="https://www.douban.com/people/153792385/games?action=wish">豆瓣游戏</a></li>
-        <li><a href="http://www.sci-hub.ren">sci-hub</a></li>
-        <li><a href="https://www.apple.com.cn">Apple</a></li>
-    </ul>
+    <!-- 网址链接 -->
+
+    <!-- 每日必看 -->
+    <div class="header">
+        <h3>每日必看</h3>
+
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab1-1')">资讯</div>
+            <div class="tab" onclick="openTab(event, 'tab1-2')">购物</div>
+            <div class="tab" onclick="openTab(event, 'tab1-3')">网盘</div>
+            <div class="tab" onclick="openTab(event, 'tab1-4')">翻译</div>
+            <div class="tab" onclick="openTab(event, 'tab1-5')">学术</div>
+            <div class="tab" onclick="openTab(event, 'tab1-6')">Ai助手</div>
+            <div class="tab" onclick="openTab(event, 'tab1-7')">笔记</div>
+            <div class="tab" onclick="openTab(event, 'tab1-8')">Emoji</div>
+        </div>
+
+        <div id="tab1-1" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://tophub.today">🔥今日热榜</a></li>
+                    <li><a href="https://web.wetab.link/?utm_source=cowtransfer">web新主页</a></li>
+                    <li><a href="https://xydh.fun/aEMPTYz">女巫魔法笔记</a></li>
+                    <li><a href="https://www.zhihu.com">知乎</a></li>
+                    <li><a href="https://www.dianyinggou.com">电影狗</a></li>
+                    <li><a href="https://cupfox.love">茶杯狐</a></li>
+                    <li><a href="https://rainymood.com/">雨天白噪音</a></li>
+                    <li><a href="https://lofira9.github.io/workpage/">我的作品集</a></li>
+                    <li><a href="http://192.168.31.1/cgi-bin/luci/;stok=d580e439f4e0b8e39f63c89a81cc1609/web/home#router">小米路由器</a></li>
+                    <li><a href="https://www.yuque.com/garry-cvby1/aqyays/mihzlq">美工盖瑞的语雀</a></li>
+                    <li><a href="https://www.yuque.com/uixxs/bilibili">新像素的语雀</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab1-2" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="http://new.xianbao.fun/category-douban-maizu">买组线报酷</a></li>
+                    <li><a href="http://www.dangdang.com">当当网</a></li>
+                    <li><a href="https://www.jd.com">京东</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab1-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.ziyuanm.com">资源猫</a></li>
+                    <li><a href="http://www.jisoupan.com/user">及搜盘</a></li>
+                    <li><a href="https://pansoso.com/">盘搜搜</a></li>
+                    <li><a href="https://clg4.clgapp1.xyz/oneindex.php">磁力狗</a></li>
+                    <li><a href="https://www.videograbber.net">免费下载视频</a></li>
+                    <li><a href="https://www.jijidown.com">唧唧B站下载</a></li>
+                    <li><a href="https://cowtransfer.com">奶牛快传</a></li>
+                    <li><a href="https://lanzou.com">蓝奏云</a></li>
+                    <li><a href="https://wormhole.app">虫洞</a></li>
+                    <li><a href="https://www.wenshushu.cn">文叔叔</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab1-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.deepl.com/translator">Deepl翻译器</a></li>
+                    <li><a href="https://fanyi.sogou.com/text">搜狗翻译</a></li>
+                    <li><a href="https://fanyi.baidu.com/mtpe-individual/multimodal#/">百度翻译</a></li>
+                    <li><a href="https://www.iciba.com/word?w=Annuit+Coeptis">金山翻译</a></li></ul>
+            </div>
+        </div>
+
+        <div id="tab1-5" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.gzlib.org.cn/">📚广州图书馆</a></li></ul>
+                    <li><a href="http://www.sci-hub.ren">sci-hub</a></li>
+                    <li><a href="http://xs.3822808.com/">谷歌学术镜像</a></li>
+                    <li><a href="https://www.scihub.net.cn/">科研学术导航</a></li>
+                    <li><a href="https://www.nppa.gov.cn/bsfw/jggs/yxspjg/">国家新闻出版署</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab1-6" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://metaso.cn/">秘塔Ai搜索</a></li>
+                    <li><a href="https://chatgpt.com/">👍Chatgpt</a></li>
+                    <li><a href="https://domore.ai/tools/clipdrop.co" title="Ai图片工具">clipdrop</a></li>
+                    <li><a href="https://kaifa.baidu.com/">开发者搜索</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab1-7" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.notion.so/Notion-0a0bc6bf314f41d183aecc39b9b6e462">Notion</a></li>
+                    <li><a href="https://www.yuque.com/dashboard">语雀</a></li>
+                    <li><a href="https://flowus.cn/fd2af920-a702-40c9-bd94-57184240c3cc">🔑账密</a></li></ul>
+            </div>
+        </div>
+
+        <div id="tab1-8" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.dbbqb.com">表情包</a></li>
+                    <li><a href="http://emojiall.com/zh-hans" title="VPN">Emoji中文网</a></li>
+                    <li><a href="https://www.emojidaquan.com/common-objects-emojis"title="VPN">苹果Emoji</a></li>
+                    <li><a href="https://teshuzifu.cn">特殊符号</a></li>
+                    <li><a href="https://emojikitchen.dev" title="谷歌表情包">emojikitchen</a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 设计工作 -->
+    <div class="header">
+        <h3>设计工作</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab2-1')">求职</div>
+            <div class="tab" onclick="openTab(event, 'tab2-2')">灵感网站</div>
+            <div class="tab" onclick="openTab(event, 'tab2-3')">学习</div>
+            <div class="tab" onclick="openTab(event, 'tab2-4')">协同工具</div>
+            <div class="tab" onclick="openTab(event, 'tab2-5')">考证</div>
+        </div>
+
+        <div id="tab2-1" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.zhipin.com/guangzhou/">BOSS直聘</a></li>
+                    <li><a href="https://www.tianyancha.com/">天眼查</a></li>
+                    <li><a href="https://www.jobui.com/">职友集</a></li>
+                    <li><a href="https://www.100chui.com/">锤子简历</a></li>
+                    <li><a href="https://aiqicha.baidu.com/">爱企查</a></li>
+                    <li><a href="https://www.68design.net/">68设计</a></li>
+                    <li><a href="https://www.fevte.com/">飞特网</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab2-2" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.zcool.com.cn">站酷</a></li>
+                    <li><a href="https://huaban.com/follow">花瓣</a></li>
+                    <li><a href="https://dameigong.cn">大美工</a></li>
+                    <li><a href="https://www.zhisheji.com">致设计</a></li>
+                    <li><a href="https://ui8.net/?ref=nav.bossdesign.cn">UI8</a></li>
+                    <li><a href="https://www.designspiration.com">designspirat</a></li>
+                    <li><a href="https://www.bigbigwork.com">大作</a></li>
+                    <li><a href="https://www.gtn9.com/index.aspx">古田路9号</a></li>
+                    <li><a href="https://tgideas.qq.com">腾讯TGideas</a></li>
+                    <li><a href="https://www.doooor.com">DOOOOR</a></li>
+                    <li><a href="https://www.uisdc.com">优设-UISDC</a></li>
+                    <li><a href="https://www.ui.cn">UICN中国</a></li>
+                    <li><a href="http://hiiibrand.com">嗨！品牌</a></li>
+                    <li><a href="http://vc.changyou.com/works-web.shtml">畅游视觉设计</a></li>
+                    <li><a href="https://www.puxiang.com">普象网</a></li>
+                    <li><a href="https://www.sj33.cn">设计之家</a></li>
+                    <li><a href="https://www.logonews.cn">标志情报局</a></li>
+                    <li><a href="https://www.shejidaren.com">设计达人</a></li>
+                    <li><a href="https://www.yymiao.cn/">运营喵</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab2-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://huke88.com">虎课网</a></li>
+                    <li><a href="https://www.linecg.com">直线网</a></li>
+                    <li><a href="https://ke.qq.com">腾讯课堂</a></li>
+                    <li><a href="https://www.gogoup.com">站酷高高手</a></li>
+                    <li><a href="https://www.doyoudo.com/free">doyoudo</a></li>
+                    <li><a href="https://www.2qj.com">巧匠课堂</a></li>
+                    <li><a href="http://www.qinxue.com">勤学网</a></li>
+                    <li><a href="https://uiiiuiii.com">优优教程</a></li>
+                    <li><a href="https://shida66.com">视达网</a></li>
+                    <li><a href="https://www.yiihuu.com">翼狐网</a></li>
+                    <li><a href="https://www.yutu.cn">羽兔网</a></li>
+                    <li><a href="http://1nami.com">1纳米</a></li>
+                    <li><a href="https://www.16xx8.com">PS教程自学</a></li>
+                    <li><a href="https://edu.51cto.com">51cto学堂</a></li>
+                    <li><a href="https://www.dxzy163.com">大学生资源网</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab2-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://yueliu.cn/v20/#/login?redirect=%2Fproject%2FP221008001277908%2Flist">阅流</a></li>
+                    <li><a href="https://web.gridea.dev/site">gridea写作</a></li>
+                    <li><a href="https://shimo.im/loginByPassword?redirect_url=https%3A%2F%2Fshimo.im%2Fdesktop">石墨文档</a></li>
+                    <li><a href="https://flbook.com.cn/">flbook作品集</a></li>
+                    <li><a href="https://boardmix.cn/app/home">博思白板</a></li>
+                    <li><a href="https://icity.ly/welcome">iCity</a></li>
+                    <li><a href="https://pixso.cn/app/recent">Pixco协同设计</a></li>
+                    <li><a href="https://js.design/workspace">即时设计</a></li>
+                    <li><a href="https://www.figma.com/files">Figma</a></li>
+                    <li><a href="https://modao.cc/workspace/me">墨刀</a></li>
+                    <li><a href="https://withpinbox.com/login">pinbox</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="tab2-5" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://jxjy.baiyunu.edu.cn/html/cn/zsxx/510.html">白云学院本科</a></li>
+                    <li><a href="http://www.gdzcb.cc/index.html">广东专插本考试</a></li>
+                    <li><a href="https://www.chsi.com.cn/">学信网</a></li>
+                    <li><a href="https://www.cltt.org/#/webHome" title="全国普通话水平测试">普通话水平测试</a></li>
+                    <li><a href="http://www.pthxx.com/">普通话学习网</a></li>
+                    <li><a href="https://www.aliyundrive.com/s/67EsUwwHRjj">张雪峰填志愿</a></li>
+                    <li><a href="https://www.zxxk.com/">学科网</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- 艺术绘画 -->
+    <div class="header">
+        <h3>艺术绘画</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab3-1')">参考</div>
+            <div class="tab" onclick="openTab(event, 'tab3-2')">笔刷</div>
+            <div class="tab" onclick="openTab(event, 'tab3-3')">Ai绘画</div>
+            <div class="tab" onclick="openTab(event, 'tab3-4')">配色</div>
+            <div class="tab" onclick="openTab(event, 'tab3-5')">社交</div>
+            <div class="tab" onclick="openTab(event, 'tab3-6')">元宇宙OC</div>
+        </div>
+
+        <div id="tab3-1" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://screenmusings.org"title="练习氛围和光影的素材库">电影高清截图</a></li>
+                    <li><a href="http://microsculpture.net"title="各种昆虫的微观照片的网站">昆虫微观照片</a></li>
+                    <li><a href="https://www.bodiesinmotion.photo">人体动态姿势</a></li>
+                    <li><a href="https://www.anyposes.com/"title="魔法人偶">anyposes</a></li>
+                    <li><a href="https://fotosketcher.com">照片转绘画风格</a></li>
+                    <li><a href="https://seaside-station.com">海边车站场景</a></li>
+                    <li><a href="https://www.yumeyakata.com">和服图案款式</a></li>
+                    <li><a href="https://www.lolitawardrobe.com">lolita服饰参考</a></li>
+                    <li><a href="https://www.e-dunhuang.com">数字敦煌</a></li>
+                    <li><a href="https://ja.ukiyo-e.org">日本浮世绘</a></li>
+                    <li><a href="https://markcordory.com">废土风格服装</a></li>
+                    <li><a href="https://www.kamitokatachi.com">髪と形人体</a></li>
+                    <li><a href="https://app.justsketch.me">艺术家人体</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab3-2" class="content hidden">
+            <div class="links">
+                <ul>
+                   <li><a href="https://myphotoshopbrushes.com/">PS笔刷</a></li>
+                   <li><a href="https://www.brusheezy.com/">免费PS笔刷</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab3-3" class="content ">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.liblib.ai/">哩布哩布</a></li>
+                    <li><a href="https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main">Huggingface</a></li>
+                    <li><a href="https://civitai.com">Civitai</a></li>
+                    <li><a href="https://17yongai.com">一起用Ai</a></li>
+                    <li><a href="https://ai-bot.cn">Ai 工具集</a></li>
+                    <li><a href="https://www.aiwht.com">Ai 万花筒</a></li>
+                    <li><a href="https://www.mjslackbot.com">MJ for Slack</a></li>
+                    <li><a href="https://freehands.cn/">意绘Ai绘画</a></li>
+                    <li><a href="https://openai.com/blog/chatgpt">Chatgpt</a></li>
+                    <li><a href="https://chat.openai.com/auth/login?next=%2F%3Fmodel%3Dgpt-4-gizmo">Chat GPT3.5</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab3-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://color.dumogu.top">🍄毒蘑菇配色</a></li>
+                    <li><a href="https://www.designspiration.com">Design色感</a></li>
+                    <li><a href="https://www.shejidaren.com/examples/tools/color-scheme/">设计导航配色</a></li>
+                    <li><a href="https://hao.uisdc.com/color">优设配色</a></li>
+                    <li><a href="https://www.webdesignrankings.com/resources/lolcolors/">哈哈颜色</a></li>
+                    <li><a href="https://brandcolors.net/">品牌颜色</a></li>
+                    <li><a href="http://zhongguose.com/">中国色</a></li>
+                    <li><a href="https://mycolor.space/?hex=%23845EC2&sub=1">调色板</a></li>
+                    <li><a href="https://uigradients.com/#FacebookMessenger">渐变配色</a></li>
+                    <li><a href="https://colorhunt.co/">设计调色板</a></li>
+                    <li><a href="https://reeoo.com/">Reeoo</a></li>
+                    <li><a href="https://gradient.shapefactory.co/">Gradient</a></li>
+                    <li><a href="https://colors.ichuantong.cn/">中国传统颜色</a></li>
+                    <li><a href="https://paletton.com/#uid=10G0u0kllllaFw0g0qFqFg0w0aF">色彩设计师</a></li>
+                    <li><a href="https://uigradients.com/#PiggyPink" title=".渐变色">uigradients</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab3-5" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="http://www.lanqb.com">蓝铅笔</a></li>
+                    <li><a href="https://www.mihuashi.com">米画师</a></li>
+                    <li><a href="https://www.gracg.com/"title="原创绘画社交网站">涂鸦王国</a></li>
+                    <li><a href="http://www.Lofter.com">LOFTER</a></li>
+                    <li><a href="https://h.bilibili.com/">bilibili相簿</a></li>
+                    <li><a href="https://pixivic.com/?VNK=343bb025">Pixiv（国内）</a></li>
+                    <li><a href="http://www.leewiart.com/WebPage/default.aspx">乐艺</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab3-6" class="content hidden">
+            <div class="links">
+                <li><a href="https://cnmods.net/web/">魔都</a></li>
+                <li><a href="https://www.thispersondoesnotexist.com">生成虚拟肖像</a></li>
+            </div>
+        </div>
+    </div>
+    <!-- 素材仓库 -->
+    <div class="header">
+        <h3>素材仓库</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab4-1')">字体icon</div>
+            <div class="tab" onclick="openTab(event, 'tab4-2')">无版权</div>
+            <div class="tab" onclick="openTab(event, 'tab4-3')">付费</div>
+            <div class="tab" onclick="openTab(event, 'tab4-4')">在线识图</div>
+            <div class="tab" onclick="openTab(event, 'tab4-5')">像素风格</div>
+            <div class="tab" onclick="openTab(event, 'tab4-6')">生成风格</div>
+        </div>
+
+        <div id="tab4-1" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://vj-type.com/3-typefaces">VJ字体下载</a></li>
+                    <li><a href="https://www.maoken.com">猫啃网</a></li>
+                    <li><a href="https://www.qiuziti.com">求字体</a></li>
+                    <li><a href="https://www.fonts.net.cn">字体天下</a></li>
+                    <li><a href="https://izihun.com">字魂网</a></li>
+                    <li><a href="https://www.likefont.com">识字体</a></li>
+                    <li><a href="http://www.sozi.cn">搜字网</a></li>
+                    <li><a href="https://www.zitijia.com">字体家</a></li>
+                    <li><a href="https://www.toolfk.com/nav_font.html">免费字体</a></li>
+                    <li><a href="https://iconpark.oceanengine.com/home">iconpark</a></li>
+                    <li><a href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2">iconfont</a></li>
+                    <li><a href="https://remixicon.com">remixicon</a></li>
+                    <li><a href="https://www.logo123.com">LOGO123</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab4-2" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.pexels.com/zh-cn">Pexels</a></li>
+                    <li><a href="https://unsplash.com">Unsplash</a></li>
+                    <li><a href="https://pixabay.com">Pixabay</a></li>
+                    <li><a href="https://picjumbo.com">Picjumbo</a></li>
+                    <li><a href="https://stocksnap.io">Stocksnap</a></li>
+                    <li><a href="https://www.pickpik.com">Pickpik</a></li>
+                    <li><a href="https://magdeleine.co">Magdeleine</a></li>
+                    <li><a href="https://pngimg.com">Pngimg</a></li>
+                    <li><a href="https://www.stickpng.com">Stickpng</a></li>
+                    <li><a href="https://www.photock.asia">Photock</a></li>
+                    <li><a href="https://gratisography.com/?ref=nav.bossdesign.cn">Gratisograph</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab4-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://699pic.com/best.html">摄图网</a></li>
+                    <li><a href="https://www.nipic.com/index.html">昵图网</a></li>
+                    <li><a href="https://www.88tph.com/">图品汇</a></li>
+                    <li><a href="https://669pic.com/">万素网</a></li>
+                    <li><a href="https://www.paixin.com/">拍信网</a></li>
+                    <li><a href="http://www.tupian114.com/">图片114</a></li>
+                    <li><a href="https://www.58pic.com/">千图网</a></li>
+                    <li><a href="https://weili.ooopic.com/">我图网</a></li>
+                    <li><a href="https://www.51miz.com/">觅知网</a></li>
+                    <li><a href="https://www.51miz.com/">图虫网</a></li>
+                    <li><a href="https://www.veer.com/?utm_source=shejidaren&utm_medium=banner&utm_campaign=201710_veer_coming&chid=8">Veer图库</a></li>
+                    <li><a href="http://www.sccnn.com/">素材中国</a></li>
+                    <li><a href="https://sucai.zhiyu.art/">知鱼素材</a></li>
+                    <li><a href="https://818ps.com/">图怪兽</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab4-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://yandex.com/images/">Yandex</a></li>
+                    <li><a href="https://www.wallpapermaiden.com">wallpaper</a></li>
+                    <li><a href="https://wallhaven.cc">wallhaven</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab4-5" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://dotown.maeda-design-room.net/?from=thosefree.com">DOTOWN</a></li>
+                    <li><a href="https://pixel-me.tokyo/en">Pixel-me</a></li>
+                    <li><a href="http://pixeljoint.com">Pixeljoint</a></li>
+                    <li><a href="https://www.pixilart.com">Pixilart</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab4-6" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://noisecreater.com/">噪波生成器</a></li>
+                    <li><a href="https://photomosh.com/ ">photomosh故障图片</a></li>
+                    <li><a href="http://thepatternlibrary.com/">无缝图片</a></li>
+                    <li><a href="https://www.fffuel.co/" title=免费的SVG生成器>fffuel</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- 三维建模 -->
+    <div class="header">
+        <h3>三维建模</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab5-1')">脑机外挂</div>
+            <div class="tab" onclick="openTab(event, 'tab5-2')">C4D资源</div>
+            <div class="tab" onclick="openTab(event, 'tab5-3')">资讯</div>
+            <div class="tab" onclick="openTab(event, 'tab5-4')">教程</div>
+            <div class="tab" onclick="openTab(event, 'tab5-5')">培训</div>
+            <div class="tab" onclick="openTab(event, 'tab5-6')">官方</div>
+        </div>
+        <div id="tab5-1" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://publish.obsidian.md/help-zh/">obsidian中文手册</a></li>
+                    <li><a href="https://forum-zh.obsidian.md/">obsidian中文论坛</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab5-2" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="http://www.modown.cn">魔顿网</a></li>
+                    <li><a href="https://www.btbat.com">R站</a></li>
+                    <li><a href="https://www.ansucai.com">AN素材库</a></li>
+                    <li><a href="https://www.c4d.cn">C4D之家</a></li>
+                    <li><a href="https://www.c4dcn.com">菜鸟C4D</a></li>
+                    <li><a href="https://c4dco.com">一酷C4D</a></li>
+                    <li><a href="http://iiidea.cn/">iiidea.cn</a></li>
+                    <li><a href="https://cgexe.com/">可动程序</a></li>
+                    <li><a href="https://www.aigei.com/">爱给网</a></li>
+                    <li><a href="http://www.ltpmx.com/">立体派</a></li>
+                    <li><a href="https://sketchfab.com/feed">sketchfab</a></li>
+                    <li><a href="https://www.turbosquid.com/">像素乌贼</a></li>
+                    <li><a href="https://polyhaven.com/">polyhavenpol</a></li>
+                    <li><a href="https://www.mixamo.com/#/">Mixamo</a></li>
+                    <li><a href="https://www.cgmodel.com">CG模型网</a></li>
+                    <li><a href="https://www.znzmo.com">知末网</a></li>
+                    <li><a href="https://www.3d66.com/" target="_blank">3D溜溜</a></li>
+                    <li><a href="https://www.cgmol.com/" target="_blank">摩尔网</a></li>
+                    <li><a href="https://mx.shejiben.com/" target="_blank">设计本</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab5-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.element3ds.com"title="CG艺术创作分享平台">微元素</a></li>
+                    <li><a href="https://www.ggac.com/v2/home"title="CG社区">GGAC</a></li>
+                    <li><a href="https://www.dongfangxiangsu.com">东方像素</a></li>
+                    <li><a href="https://www.surfcg.com/index?by=2title="title="伪冒A站">Surfcg</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab5-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.cger.com">CGER</a></li>
+                    <li><a href="https://cgsociety.org">CGSociety</a></li>
+                    <li><a href="https://www.cgjoy.com">CGjoy模型网</a></li>
+                    <li><a href="https://www.cgjoy.com/train.php">CGJOY课堂</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab5-5" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.dcgart.cn">DCG建模学院</a></li>
+                    <li><a href="https://www.thepersona.io">thepersona</a></li>
+                    <li><a href="https://3dtotal.com/">3dtotal</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab5-6" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://cineversity.maxon.net/zh">Cinema4D官方</a></li>
+                    <li><a href="https://www.shuyishe.com/bookDetails?id=UB7218a28db05a4"title="新印象Octane for Cinema 4D渲染技术核心教程">数艺设</a></li>
+                    <li><a href="">&nbsp;</a></li>
+                    <li><a href="">&nbsp;</a></li>
+                    <li><a href="https://www.blender.org/">Blender官方</a></li>
+                    <li><a href="https://blender.bgteach.com/">Blender中文手册</a></li>
+                    <li><a href="https://docs.blender.org/manual/zh-hans/2.93/index.html">Blender 2.93</a></li>
+                    <li><a href="">&nbsp;</a></li>
+                    <li><a href="https://www.u3dchina.com/plugin.php?id=forum_index">Unity开发者联盟</a></li>
+                    <li><a href="https://unity.cn/">UnityStore</a></li>
+                    <li><a href="https://www.zbrushcentral.com/"title="VPN">zbrushcentra</a></li>
+                    <li><a href="https://www.unrealengine.com/zh-CN/unreal-engine-5">虚幻引擎5</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- 翻墙VPN -->
+    <div class="header">
+        <h3>翻墙VPN</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab6-1')">机场</div>
+            <div class="tab" onclick="openTab(event, 'tab6-2')">艺术</div>
+            <div class="tab" onclick="openTab(event, 'tab6-3')">视频</div>
+        </div>
+        <div id="tab6-1" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://ikuuu.pw/user#">ikuuu 魔杖1</a></li>
+                    <li><a href="https://shop.chaintz.app/#/login">chaintz</a></li>
+                    <li><a href="https://xn--mesr8b36x.art/#/login">大机场魔法</a></li>
+                    <li><a href="https://52.mk">品云机场导航</a></li>
+                    <li><a href="https://ybfl.xyz">ybfl 节点</a></li>
+                    <li><a href="https://indecisive-aluminum-dda.notion.site/35f343bec8b2466d971f4a7dfded93a2">肆意科学</a></li>
+                    <li><a href="https://merlinblog.xyz">Sabrina的万事屋</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="tab6-2" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.artstation.com">ArtStation</a></li>
+                    <li><a href="https://www.pixiv.net">pixiv</a></li>
+                    <li><a href="https://www.pinterest.com">Pinterest</a></li>
+                    <li><a href="https://dribbble.com">Dribbble</a></li>
+                    <li><a href="http://behance.com/bacosta">Behance</a></li></ul>
+            </div>
+        </div>
+        <div id="tab6-3" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.youtube.com">YouTube</a></li>
+                    <li><a href="https://twitter.com/i/trends">Twitter小蓝鸟</a></li>
+                    <li><a href="https://discordapp.com/channels/@me">Discord</a></li>
+                    <li><a href="https://tumblr.com">Tumblr</a></li>
+                    <li><a href="https://www.facebook.com">facebook</a></li>
+                    <li><a href="https://www.instagram.com/?hl=zh-tw">Instagram</a></li></ul>
+            </div>
+        </div>
+    </div>
+    <!-- 游戏数码 -->
+    <div class="header">
+        <h3>游戏数码</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab7-1')">资讯</div>
+            <div class="tab" onclick="openTab(event, 'tab7-2')">资源</div>
+            <div class="tab" onclick="openTab(event, 'tab7-3')">攻略</div>
+            <div class="tab" onclick="openTab(event, 'tab7-4')">平台官网</div>
+            <div class="tab" onclick="openTab(event, 'tab7-5')">数码资讯</div>
+            <div class="tab" onclick="openTab(event, 'tab7-6')">电脑</div>
+        </div>
+        <div id="tab7-1" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.vgchartz.com">游戏销量记录</a></li>
+                    <li><a href="https://cowlevel.net/feed">奶牛关</a></li>
+                    <li><a href="https://www.yystv.cn">游研社</a></li>
+                    <li><a href="https://www.gcores.com">机核网</a></li>
+                    <li><a href="http://www.ign.xn--fiqs8s">IGN中国版</a></li>
+                    <li><a href="https://www.ali213.net">游侠网</a></li>
+                    <li><a href="https://indienova.com">indienova</a></li>
+                    <li><a href="https://www.gamer.cn">磁场 GAMER</a></li>
+                    <li><a href="https://www.vgtime.com/">游戏时光</a></li>
+                    <li><a href="http://www.gamersky.com">游民星空</a></li>
+                    <li><a href="https://psnine.com">PSN中文站</a></li>
+                    <li><a href="http://bbs.nga.cn">NGA玩家社区</a></li>
+                    <li><a href="https://www.jufair.com/exhibition/600.html">聚展-China joy</a></li>
+                    <li><a href="https://www.jufair.com/exhibition/578.html?bd_vid=11183909559101506822">聚展-德国科隆游戏展</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab7-2" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.flysheep6.com">资源避难所</a></li>
+                    <li><a href="http://821730880.ysepan.com">萌新单机之家</a></li>
+                    <li><a href="https://mxdjzj.com">萌新单机之家</a></li>
+                    <li><a href="https://www.3dmgame.com">3dmgame</a></li>
+                    <li><a href="http://www.3h3.com">当游网</a></li>
+                    <li><a href="https://www.mhhf.com">灵动游戏</a></li>
+                    <li><a href="https://poki.com/zh">poki在线游戏</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab7-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://zh.stardewvalleywiki.com/Stardew_Valley_Wiki">星露谷物语wiki</a></li>
+                    <li><a href="https://wiki.biligame.com/zspms/%E9%A6%96%E9%A1%B5?hmsr=%E6%B8%B8%E6%88%8F%E4%B8%AD%E5%BF%83&hmpl=&h">战双帕米什wiki</a></li>
+                    <li><a href="https://wiki.biligame.com/eldenring/%E9%A6%96%E9%A1%B5">艾尔登法环wiki</a></li>
+                    <li><a href="https://www.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5">灰机Wiki</a></li>
+                    <li><a href="https://wiki.biligame.com/wiki/%E9%A6%96%E9%A1%B5">B站Wiki</a></li>
+                    <li><a href="https://www.miyoushe.com/ys">米游社</a></li>
+                    <li><a href="https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?bbs_presentation_style=no_header&lang">提瓦特地图</a></li>
+                    <li><a href="https://wiki.biligame.com/ys/%E9%A6%96%E9%A1%B5">原神wiki</a></li>
+                    <li><a href="https://cocogoat.work/achievement">椰羊成就</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab7-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://store.steampowered.com">Steam</a></li>
+                    <li><a href="https://store.epicgames.com/zh-CN">Epic Games</a></li>
+                    <li><a href="https://www.nintendoswitch.com.cn">Switch</a></li>
+                    <li><a href="https://www.xbox.com/zh-CN/consoles">X box</a></li>
+                    <li><a href="https://store.playstation.com/zh-hant-hk/pages/ps5">Play Station</a></li>
+                    <li><a href=""></a></li></ul>
+            </div>
+        </div>
+
+        <div id="tab7-5" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://topic.expreview.com/CPU/">CPU天梯排行榜</a></li>
+                    <li><a href="https://topic.expreview.com/GPU/">显卡天梯排行榜</a></li>
+                    <li><a href="http://guozhivip.com/rank/">果汁排行榜</a></li>
+                    <li><a href="https://sspai.com/?utm_source=infinitynewtab">少数派</a></li>
+                    <li><a href="https://www.36kr.com">36氪</a></li></ul>
+                    <li><a href="https://www.guokr.com">果壳</a></li>
+                    <li><a href="https://www.ghxi.com/?utm_source=wetab">果核剥壳</a></li>
+                    <li><a href="https://www.ifanr.com">爱范儿</a></li>
+                    <li><a href="https://www.ithome.com">IT之家</a></li>
+                    <li><a href="https://www.dgtle.com">数字尾巴</a></li>
+                    <li><a href="https://www.digitaling.com">数英</a></li>
+                    <li><a href="https://topbook.cc/overview">Topbook</a></li>
+                    <li><a href="https://www.rologo.com">标志共和国</a></li>
+                    <li><a href="https://www.zol.com.cn">中关村在线</a></li>
+                    <li><a href="https://www.jiemian.com">界面新闻</a></li>
+                    <li><a href="https://www.tech-girlz.com">塔科女子</a></li>
+                    <li><a href="https://www.landiannews.com">蓝点网</a></li>
+                    <li><a href="https://www.woshipm.com">人人都是产品经理</a></li>
+                    <li><a href="https://shenmezhidedu.com/?from=wetab">什么值得读</a></li>
+                    <li><a href="https://www.chinaz.com">站长之家</a></li>
+            </div>
+        </div>
+
+        <div id="tab7-6" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://support.microsoft.com/zh-cn/windows">Window帮助</a></li>
+                    <li><a href="https://support.microsoft.com/zh-cn/topic/%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0-2f9c1819-310d-48a7-ac12-25191269903c#WindowsVersion=Windows_11">window更新</a></li>
+                    <li><a href="https://hellowindows.cn">hello windows</a></li></ul>
+                    <li><a href="https://fakeupdate.net">假装系统在升级</a></li>
+            </div>
+        </div>
+
+    </div>
+    <!-- 大佬基地 -->
+    <div class="header">
+        <h3>大佬基地</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab8-1')">主页</div>
+            <div class="tab" onclick="openTab(event, 'tab8-2')">导航</div>
+            <div class="tab" onclick="openTab(event, 'tab8-3')">Blog博客</div>
+        </div>
+        <div id="tab8-1" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://nav.bossdesign.cn">Boss设计</a></li>
+                    <li><a href="https://hao.shenyecg.com/CG">深夜CG导航</a></li>
+                    <li><a href="https://www.bookmarkearth.com">书签地球</a></li>
+                    <li><a href="https://www.xuezha.cn">学渣网</a></li>
+                    <li><a href="https://16map.com">一流导航</a></li>
+                    <li><a href="https://www.learnonly.xyz">Learnonly导航</a></li>
+                    <li><a href="http://lackar.com/aa/">Anywhere</a></li>
+                    <li><a href="http://so.uigreat.com">UI设计导航</a></li>
+                    <li><a href="https://233heji.com">合集网</a></li>
+                    <li><a href="https://www.seeseed.com/">Seeseed</a></li>
+                    <li><a href="https://creativemass.cn">CreativeMass</a></li>
+                    <li><a href="https://idesign.qq.com/#!index/feed">腾讯设计导航</a></li>
+                    <li><a href="https://hao.uisdc.com">优设导航</a></li>
+                    <li><a href="https://chuangzaoshi.com">创造狮</a></li>
+                    <li><a href="http://hao.shejidaren.com/index.html">设计导航</a></li>
+                    <li><a href="https://www.ubuuk.com">优波设计</a></li>
+                    <li><a href="https://cooltools.top">cooltools</a></li>
+                    <li><a href="https://it-gou.com">IT狗前端</a></li>
+                    <li><a href="https://www.sjsdh.cn">搜奇导航</a></li>
+                    <li><a href="https://www.965yy.cn">运营导航965</a></li>
+                    <li><a href="https://www.hhdh.net">氢导航（新）</a></li>
+                    <li><a href="https://www.7udh.com">柒导航</a></li>
+                    <li><a href="https://www.jizhihezi.com/#term-130">集知盒子</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="tab8-2" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://xydh.fun/">炫猿iLINK</a></li>
+                    <li><a href="https://xydh.fun/chenyixi">以西笑嘻嘻</a></li>
+                    <li><a href="https://xydh.fun/LouCX">LouCK</a></li>
+                    <li><a href="https://xydh.fun/yyds007">人间萤火</a></li>
+                    <li><a href="https://xydh.fun/yaoguai">妖怪青年</a></li>
+                    <li><a href="https://xydh.fun/zcc">ZCC小站</a></li>
+                    <li><a href="https://xydh.fun/pddxz">Climd</a></li>
+                    <li><a href="https://xydh.fun/muggles">麻瓜秘密补习班</a></li>
+                    <li><a href="https://xydh.fun/echsfxy">二次寒树</a></li>
+                    <li><a href="https://xydh.fun/zskkkhttps://xydh.fun/zskkk">学习小屋</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="tab8-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.wikimoe.com/">维基萌</a></li>
+                    <li><a href="https://www.wikimoe.com/link.html">wikimoe博客</a></li>
+                    <li><a href="https://y1xi.eu.org">以西的小窝</a></li>
+                    <li><a href="https://akilar.top">Akilar糖果屋</a></li>
+                    <li><a href="https://xiaoshuai.link">小帅同学</a></li>
+                    <li><a href="https://zfe.space">小冰Blog</a></li>
+                    <li><a href="https://www.antmoe.com">小康Blog</a></li>
+                    <li><a href="https://notes.fe-mm.com">茂茂物语</a></li>
+                    <li><a href="https://www.nite07.com">Nite07</a></li>
+                    <li><a href="https://2heng.xin">樱花庄的白猫</a></li>
+                    <li><a href="https://misakishiki.site/">栗木-空气力学先驱</a></li>
+                    <li><a href="https://blog.badapple.pro/archives.html">东方幻梦</a></li>
+                    <li><a href="https://meow3.family.blog/">恶魔菌の记事簿</a></li></ul>
+            </div>
+        </div>
+    </div>
+    <!-- 有趣的世界 -->
+    <div class="header">
+        <h3>有趣的世界</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab9-1')">工具</div>
+            <div class="tab" onclick="openTab(event, 'tab9-2')">软件下载</div>
+            <div class="tab" onclick="openTab(event, 'tab9-3')">元宇宙</div>
+            <div class="tab" onclick="openTab(event, 'tab9-4')">独立个站</div>
+            <div class="tab" onclick="openTab(event, 'tab9-5')">天文气象</div>
+            <div class="tab" onclick="openTab(event, 'tab9-6')">人文地理</div>
+            <div class="tab" onclick="openTab(event, 'tab9-7')">占卜</div>
+        </div>
+
+        <div id="tab9-1" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://privacy.aiuys.com">手机绑定查询</a></li>
+                    <li><a href="https://www.superbed.cn">聚合图床</a></li>
+                    <li><a href="https://imgse.com">路过图床</a></li>
+                    <li><a href="https://image.icu/">image图床</a></li>
+                    <li><a href="https://www.jinyongci.com">禁用词查询</a></li>
+                    <li><a href="https://www.qijishow.com/down/tools.html">奇迹秀工具</a></li>
+                    <li><a href="https://cn.office-converter.com/">Office文件转换</a></li>
+                    <li><a href="https://www.shejidaren.com/examples/tools/golden-ratio/index.html">黄金比例计算</a></li>
+                    <li><a href="https://dianshang.gaoding.com/tool/html/tool/pc2phone.html">淘宝PC转链接</a></li>
+                    <li><a href="https://www.ginifab.com/feeds/angle_measurement/online_protractor.zh-cn.php">在线量角器</a></li>
+                    <li><a href="http://www.atoolbox.net/Category.php?Id=33">计算换算</a></li>
+                    <li><a href="https://www.toolnb.com">爱资料工具</a></li>
+                    <li><a href="https://tiomg.org/">太美工具网</a></li>
+                    <li><a href="https://www.toolzl.com">在线工具箱</a></li>
+                    <li><a href="https://receive-sms.cc">在线验证码</a></li>
+                    <li><a href="https://tool.chinaz.com">站长工具 iP查询</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab9-2" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://soft.macxf.com/">软件先锋</a></li>
+                    <li><a href="https://www.hereitis.cn/">here it is资源</a></li>
+                    <li><a href="https://zypuu.com">资源铺</a></li>
+                    <li><a href="https://chrome.zzzmh.cn/#/index">极简插件</a></li>
+                    <li><a href="https://extfans.com/">扩展迷</a></li>
+                    <li><a href="https://www.appinn.com/?utm_source=wetab">小众软件</a></li>
+                    <li><a href="https://57cool.cool">57号同学</a></li>
+                    <li><a href="https://www.macat.vip//">马克喵</a></li>
+                    <li><a href="https://www.thosefree.com/">🎫那些免费的砖</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab9-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab9-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://garryui.cn">卑微美工garryui</a></li>
+                    <li><a href="https://2019.makemepulse.com">makemepulse</a></li>
+                    <li><a href="https://moonsseer.lofter.com">lof-moonsseer</a></li>
+                    <li><a href="https://bairiyixiang39921.lofter.com/view">lof-白日臆想</a></li>
+                    <li><a href="https://haiyangzhixin850.lofter.com/view">lof-海洋之鑫</a></li>
+                    <li><a href="https://kontai.lofter.com/view">lofter - 只需黎明</a></li>
+                    <li><a href="https://house-map.cn/">地图搜租房</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab9-5" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.meteorshowers.org/view/Lyrids">太阳系坐标</a></li>
+                    <li><a href="https://www.720yun.com/t/eb42ejpvu1a?scene_id=365147">太阳系模拟</a></li>
+                    <li><a href="http://thestarsetsociety.org/">星际协会</a></li>
+                    <li><a href="https://earth.nullschool.net/">地球气象观测</a></li>
+                    <li><a href="http://typhoon.zjwater.gov.cn/wap.htm">台风实时路径</a></li>
+                    <li><a href="https://www.skypixel.com/">天空之城</a></li>
+                    <li><a href="https://www.earthol.com/">全景卫星地图</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab9-6" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://crashcourse.club"title=纪录片中文字幕组>crash course</a></li>
+                    <li><a href="http://www.cbaigui.com">纪妖</a></li>
+                    <li><a href="https://g2.ltfc.net/home">中国珍宝箱</a></li>
+                    <li><a href="https://www.allhistory.com">全历史</a></li>
+                    <li><a href="https://www.countryreports.org/countries/World.htm">国家百科</a></li>
+                    <li><a href="https://www.envisioningchemistry.cn">重现化学</a></li>
+                    <li><a href="https://www.msdmanuals.cn/#mission">默沙东诊疗手册</a></li>
+                    <li><a href="https://www.mvyxws.com/">医学微视</a></li>
+                    <li><a href="https://zh.wikipedia.org/zh-cn">维基百科</a></li>
+                    <li><a href="https://zh.wikipedia.org/zh-cn">wolframalpha</a></li>
+                    <li><a href="https://wiki.mbalib.com/wiki/Portal:%E8%AF%81%E5%88%B8">MBA智库</a></li>
+                    <li><a href="https://fuun.fun">fuun.fun</a></li>
+                    <li><a href="https://youquhome.com">有趣网址之家</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab9-7" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://p.taluo.com">塔罗牌在线占卜</a></li>
+                    <li><a href="https://www.xxwolo.com/tarots">星星在线塔罗牌</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- HTML代码 -->
+    <div class="header">
+        <h3>HTML代码</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab10-1')">仓库</div>
+            <div class="tab" onclick="openTab(event, 'tab10-2')">学习</div>
+            <div class="tab" onclick="openTab(event, 'tab10-3')">HTML样式</div>
+            <div class="tab" onclick="openTab(event, 'tab10-4')">游戏开发</div>
+            <div class="tab" onclick="openTab(event, 'tab10-5')">建站</div>
+        </div>
+
+        <div id="tab10-1" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.csdn.net">csdn</a></li>
+                    <li><a href="https://github.com">github</a></li>
+                    <li><a href="https://www.jianshu.com/">简书</a></li>
+                    <li><a href="https://segmentfault.com/">思否</a></li>
+                    <li><a href="https://www.oschina.net">开源中国</a></li>
+                    <li><a href="https://gitee.com/explore">码云Gitee</a></li>
+                    <li><a href="https://tool.lu/">程序员工具箱</a></li>
+                    <li><a href="https://devdocs.io/">Devdocs</a></li>
+                    <li><a href="http://www.fenby.com">Fenby</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab10-2" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.runoob.com/">菜鸟教程</a></li>
+                    <li><a href="https://www.w3school.com.cn">w3school</a></li>
+                    <li><a href="https://www.51zxw.net/list.aspx?cid=380">JAVA基础</a></li>
+                    <li><a href="https://www.icourse163.org">中国大学MOOC</a></li>
+                    <li><a href="https://www.imooc.com">慕课网</a></li>
+                    <li><a href="http://yun.itheima.com/">黑马程序员</a></li>
+                    <li><a href="https://stu.ityxb.com/resources/list">传智教育</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab10-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://animista.net">animista</a></li>
+                    <li><a href="https://ui.glass/generator">Glass Ui</a></li>
+                    <li><a href="https://www.csswinner.com/?ref=nav.bossdesign.cn">csswinner</a></li>
+                    <li><a href="http://augus.github.io/ngAnimate/">Augus</a></li>
+                    <li><a href="https://animate.style/">animate</a></li>
+                    <li><a href="https://cccreate.co">cccreate</a></li>
+                    <li><a href="https://uiverse.io">uiverse</a></li>
+                    <li><a href="https://greasyfork.org/zh-CN">greasyfork</a></li>
+                    <li><a href="https://www.bossdesign.cn/animista/">boss设计推荐</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab10-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://docs.cocos.com/creator/manual/zh/getting-started/" >COCOS使用手册</a></li>
+                    <li><a href="https://www.cocos.com/env"title="2D游戏开发引擎">COCOS游戏开发</a></li>
+                    <li><a href="http://e.dangdang.com/media/h5/h5reader/index.html?id=1901304896&deviceType=h5&user_client=h5&channelId=70000#!">COCOS当当阅读</a></li>
+                    <li><a href="https://eva-engine.gitee.io/" >EVA.JS</a></li>
+                    <li><a href="https://hxkj.vip/calendar/#/home">VUE3</a></li>
+                    <li><a href="http://www.v2ex.com">V2EX</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab10-5" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://huliku.com/seo">狐狸库</a></li>
+                    <li><a href="https://app.huoban.com/companies/personal">伙伴云（无用）</a></li>
+                    <li><a href="https://deepinout.com/git/git-questions/75_git_can_i_amend_a_commit_made_with_vscode_to_github_repo.html">git远程修改</a></li>
+                    <li><a href="https://machbbs.com">machbbs论坛</a></li>
+                    <li><a href="https://blog.csdn.net/zhpf225/article/details/103344385">vscode远程修改</a></li>
+                    <li><a href="https://blog.csdn.net/weixin_46007404/article/details/118669325">blog.csdn</a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- 书 影 音 漫 -->
+    <div class="header">
+        <h3>书 影 音 漫</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab11-1')">Movies</div>
+            <div class="tab" onclick="openTab(event, 'tab11-2')">Music</div>
+            <div class="tab" onclick="openTab(event, 'tab11-3')">电子书资源</div>
+            <div class="tab" onclick="openTab(event, 'tab11-4')">动漫</div>
+            <div class="tab" onclick="openTab(event, 'tab11-5')">摄影</div>
+            <div class="tab" onclick="openTab(event, 'tab11-6')">视频追番</div>
+        </div>
+
+        <div id="tab11-1" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.mvcat.com">mvcat电影推荐</a></li>
+                    <li><a href="https://www.maoyan.com">猫眼电影</a></li>
+                    <li><a href="https://www.tunefind.com">tunefind</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab11-2" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="http://www.impawards.com">impawards</a></li>
+                    <li><a href="https://www.yinfans.me">音范丝</a></li>
+                    <li><a href="https://music.163.com/?from=infinity">网易云音乐</a></li>
+                    <li><a href="https://netease-music.fe-mm.com/#/music/playlist">MMplayer</a></li>
+                    <li><a href="https://www.missevan.com">猫耳FM</a></li>
+                    <li><a href="https://www.hifini.com">HiFi音乐</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab11-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://pup6.yunzhan365.com/bookcase/jmyr/index.html">北大出版社</a></li>
+                    <li><a href="http://www.dzkbw.com/">电子课本网</a></li>
+                    <li><a href="https://www.loc.gov/collections/world-digital-library/about-this-collection/">世界数字图书馆</a></li>
+                    <li><a href="http://www.banshujiang.cn/">搬书匠</a></li>
+                    <li><a href="https://www.shuge.org/">书格</a></li>
+                    <li><a href="https://www.kgbook.com/">苦瓜书盘</a></li>
+                    <li><a href="https://book.sciencereading.cn/shop/main/Login/shopFrame.do">科学文库</a></li>
+                    <li><a href="https://www.shuxiangjia.cn/">书享家</a></li>
+                    <li><a href="https://koodo.960960.xyz/zh"title="免费开源电子阅读">koodo</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab11-4" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://acg17.com">ACG17</a></li>
+                    <li><a href="https://comic.idmzj.com">动漫之家漫画</a></li>
+                    <li><a href="https://kox.moe">KOX漫画资源</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab11-5" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://photo.poco.cn">poco相机</a></li>
+                    <li><a href="https://www.fengniao.com">蜂鸟网</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab11-6" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.juji123.com">剧集之家</a></li>
+                    <li><a href="https://www.80sgod.com">80S手机电影</a></li>
+                    <li><a href="http://www.iyinghua.io">樱花动漫</a></li>
+                    <li><a href="http://www.yhdmba.net">动漫H8</a></li>
+                    <li><a href="https://www.tvn.cc">韩剧网</a></li></ul>
+                    <li><a href="https://tel.dm5.com">动漫屋</a></li>
+                    <li><a href="https://www.520meiju.cc/file/list40.html">520美剧</a></li>
+                    <li><a href="https://v.qq.com">腾讯视频</a></li>
+                    <li><a href="https://www.youku.com">优酷</a></li>
+                    <li><a href="https://www.iqiyi.com">爱奇艺</a></li>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- AE特效资源 -->
+    <div class="header">
+        <h3>AE特效资源</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab12-1')">模板</div>
+            <div class="tab" onclick="openTab(event, 'tab12-2')">配音</div>
+            <div class="tab" onclick="openTab(event, 'tab12-3')">素材</div>
+        </div>
+
+        <div id="tab12-1" class="content">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.aemobanku.com/ ">AE模板库</a></li>
+                    <li><a href=" https://www.yiz.vip/">忆姿网</a></li>
+                    <li><a href="http://www.lookae.com/">LookAE</a></li>
+                    <li><a href="http://www.xinpianchang.com/square">新片场</a></li>
+                    <li><a href="http://www.mfcpx.com/">FCPX资源站</a></li>
+                    <li><a href="https://coverr.co/">coverr</a></li>
+                    <li><a href="https://www.rrcg.cn/">人人素材</a></li>
+                    <li><a href="https://www.cgzyw.com/">CG资源站</a></li>
+                    <li><a href="https://www.newcger.com/">新CG儿</a></li>
+                    <li><a href="http://www.gfxcamp.com/">龋齿一号</a></li>
+                    <li><a href="https://www.didixk.com/">地底星空</a></li>
+                    <li><a href="https://c4dsky.com/">书生CG资源网</a></li>
+                    <li><a href="https://mixkit.co/">Mixkit</a></li>
+                    <li><a href="https://www.cgown.com/">CG资源网</a></li>
+                    <li><a href="https://www.videvo.net/"title=免费短视频>Video</a></li>
+                    <li><a href="https://vfx.productioncrate.com/#_ga=2.177071333.176055276.1631770511-684142523.1631770511">FootageCrate</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab12-2" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.tosound.com/">淘声网</a></li>
+                    <li><a href="https://www.ear0.com/">耳聆网</a></li>
+                    <li><a href="https://www.sd235.net/">深度配音网</a></li>
+                    <li><a href="https://www.subspeak.top/">字幕说</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab12-3" class="content hidden">
+            <div class="links">
+                <ul>
+                    <li><a href="https://www.sucaitu.cc/">素材兔</a></li>
+                    <li><a href="https://shipin520.com/">潮点视频</a></li>
+                    <li><a href="https://www.lfx20.com">乐分享</a></li>
+                    <li><a href="http://www.iguoguo.net/">爱果果</a></li>
+                    <li><a href="https://sc.chinaz.com/"> 站长素材</a></li>
+                    <li><a href="https://www.vjshi.com/">VJ师网</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="header">
+        <h3>-</h3>
+        <div class="tabs">
+            <div class="tab" onclick="openTab(event, 'tab12-1')">-</div>
+            <div class="tab" onclick="openTab(event, 'tab12-2')">-</div>
+        </div>
+        <div id="tab12-1" class="content hidden">
+            <div class="links">
+                <ul>
+                </ul>
+            </div>
+        </div>
+        <div id="tab12-2" class="content">
+            <div class="links">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+
 </div>
 
-<!-- 邮箱 -->
-<div class="nav">
-    <ul>
-        <li>邮箱</li>
-        <li><a href="https://www.deepl.com/translator">Deepl翻译器</a></li>
-        <li><a href="https://fanyi.sogou.com/text">搜狗翻译</a></li>
-        <li><a href="https://fanyi.baidu.com/mtpe-individual/multimodal#/">百度翻译</a></li>
-        <li><a href="https://www.iciba.com/word?w=Annuit+Coeptis">金山翻译</a></li>
-        <li><a href="https://wx.mail.qq.com/">QQ邮箱</a></li>
-        <li><a href="https://mail.google.com/mail/u/0/#inbox">谷歌邮箱</a></li>
-        <li><a href="https://pan.baidu.com/disk/main?from=homeFlow#/index?category=all">百度网盘</a></li>
-        <li><a href="https://metaso.cn/">秘塔Ai搜索</a></li>
-    </ul>
-    
-</div>
-
-<!-- 购物 -->
-<div class="nav">
-    <ul>
-        <li>购物</li>
-        <li><a href="https://www.taobao.com">淘宝</a></li>
-        <li><a href="http://new.xianbao.fun/category-douban-maizu">买组线报酷</a></li>
-        <li><a href="http://www.dangdang.com">当当网</a></li>
-        <li><a href="https://www.jd.com">京东</a></li>
-    </ul>
-</div>
-
-<!-- 笔记 -->
-<div class="nav">
-    <ul>
-        <li>笔记</li>
-        <li><a href="https://www.notion.so/Notion-0a0bc6bf314f41d183aecc39b9b6e462">Notion</a></li>
-        <li><a href="https://www.yuque.com/dashboard">语雀</a></li>
-        <li><a href="https://flowus.cn/fd2af920-a702-40c9-bd94-57184240c3cc">🔑账密</a></li>
-    </ul>
-</div>
-
-<!-- 视频 -->
-<div class="nav">
-    <ul>
-        <li>视频</li>
-        <li><a href="https://www.bilibili.com">B站</a></li>
-        <li><a href="https://www.douyin.com/">抖音</a></li>
-        <li><a href="https://www.dianyinggou.com">电影狗</a></li>
-        <li><a href="https://555dyy10.com/">🎬 555电影</a></li>
-        <li><a href="https://cupfox.love">茶杯狐</a></li>
-        <li><a href="https://555dyy10.com/vodplay/391621-2-1.html">令人心动的Offer</a></li>
-        <li><a href="https://555dyy10.com/voddetail/454947.html">知否</a></li>
-        <li><a href="https://rainymood.com/">雨天白噪音</a></li>
-    </ul>
-</div>
-
-<!-- 设计工作 -->
-<div id="tab1" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h6>工作机会</h6>
-            <li><a href="https://www.zhipin.com/guangzhou/">BOSS直聘</a></li>
-            <li><a href="https://www.tianyancha.com/">天眼查</a></li>
-            <li><a href="https://www.jobui.com/">职友集</a></li>
-            <li><a href="https://www.100chui.com/">锤子简历</a></li>
-            <li><a href="https://aiqicha.baidu.com/">爱企查</a></li>
-            <li><a href="https://www.heatapp.cn/">兼职</a></li>
-            <h6>设计接单平台</h6>
-            <li><a href="https://www.68design.net/">68设计</a></li>
-            <li><a href="https://www.fevte.com/">飞特网</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>设计网站</h6>
-            <li><a href="https://www.zcool.com.cn">站酷</a></li>
-            <li><a href="https://huaban.com/follow">花瓣</a></li>
-            <li><a href="https://dameigong.cn">大美工</a></li>
-            <li><a href="https://www.zhisheji.com">致设计</a></li>
-            <li><a href="https://ui8.net/?ref=nav.bossdesign.cn">UI8</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.designspiration.com">designspirat</a></li>
-            <li><a href="https://www.bigbigwork.com">大作</a></li>
-            <li><a href="https://www.gtn9.com/index.aspx">古田路9号</a></li>
-            <li><a href="https://tgideas.qq.com">TGideas腾讯互动</a></li>
-            <li><a href="https://www.doooor.com">DOOOOR</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.uisdc.com">优设-UISDC</a></li>
-            <li><a href="https://www.ui.cn">UICN中国</a></li>
-            <li><a href="http://hiiibrand.com">嗨！品牌</a></li>
-            <li><a href="http://vc.changyou.com/works-web.shtml">畅游视觉设计中心</a></li>
-            <li><a href="https://www.puxiang.com">普象网</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.sj33.cn">设计之家</a></li>
-            <li><a href="https://www.logonews.cn">标志情报局</a></li>
-            <li><a href="https://www.shejidaren.com">设计达人</a></li>
-            <li><a href="https://www.yymiao.cn/">运营喵</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>学习提升</h6>
-            <li><a href="https://huke88.com">虎课网</a></li>
-            <li><a href="https://www.linecg.com">直线网</a></li>
-            <li><a href="https://ke.qq.com">腾讯课堂</a></li>
-            <li><a href="https://www.gogoup.com">站酷高高手</a></li>
-            <li><a href="https://www.doyoudo.com/free">doyoudo</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.2qj.com">巧匠课堂</a></li>
-            <li><a href="http://www.qinxue.com">勤学网</a></li>
-            <li><a href="https://uiiiuiii.com">优优教程</a></li>
-            <li><a href="https://shida66.com">视达网</a></li>
-            <li><a href="https://www.yiihuu.com">翼狐网</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.yutu.cn">羽兔网</a></li>
-            <li><a href="http://1nami.com">1纳米</a></li>
-            <li><a href="https://www.16xx8.com">PS教程自学</a></li>
-            <li><a href="https://edu.51cto.com">51cto学堂</a></li>
-            <li><a href="https://www.dxzy163.com">大学生资源网</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>Ai绘画模型</h6>
-            <li><a href="https://www.liblib.ai/">哩布哩布</a></li>
-            <li><a href="https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main">拥抱脸Huggingfa</a></li>
-            <li><a href="https://civitai.com">Civitai</a></li>
-            <li><a href="https://17yongai.com">一起用Ai</a></li>
-            <li><a href="https://ai-bot.cn">Ai 工具集</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.aiwht.com">Ai 万花筒</a></li>
-            <li><a href="https://www.mjslackbot.com">MJ for Slack</a></li>
-            <li><a href="https://freehands.cn/">意绘Ai绘画</a></li>
-            <li><a href="https://openai.com/blog/chatgpt">Chatgpt</a></li>
-            <li><a href="https://chat.openai.com/auth/login?next=%2F%3Fmodel%3Dgpt-4-gizmo">Cgat GPT3.0</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>配色灵感</h2>
-            <li><a href="https://color.dumogu.top">🍄毒蘑菇配色</a></li>
-            <li><a href="https://www.designspiration.com">Design色感</a></li>
-            <li><a href="https://www.shejidaren.com/examples/tools/color-scheme/">设计导航配色</a></li>
-            <li><a href="https://hao.uisdc.com/color">优设配色</a></li>
-            <li><a href="https://www.webdesignrankings.com/resources/lolcolors/">哈哈颜色</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://brandcolors.net/">品牌颜色</a></li>
-            <li><a href="http://zhongguose.com/">中国色</a></li>
-            <li><a href="https://mycolor.space/?hex=%23845EC2&sub=1">调色板</a></li>
-            <li><a href="https://uigradients.com/#FacebookMessenger">渐变配色</a></li>
-            <li><a href="https://colorhunt.co/">设计调色板</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://reeoo.com/">Reeoo</a></li>
-            <li><a href="https://gradient.shapefactory.co/">Gradient</a></li>
-            <li><a href="https://colors.ichuantong.cn/">中国传统颜色</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>字体icon</h2>
-            <li><a href="https://vj-type.com/3-typefaces">VJ字体下载</a></li>
-            <li><a href="https://www.maoken.com">猫啃网</a></li>
-            <li><a href="https://www.qiuziti.com">求字体</a></li>
-            <li><a href="https://www.fonts.net.cn">字体天下</a></li>
-            <li><a href="https://izihun.com">字魂网</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.likefont.com">识字体</a></li>
-            <li><a href="http://www.sozi.cn">搜字网</a></li>
-            <li><a href="https://www.zitijia.com">字体家</a></li>
-            <li><a href="https://www.toolfk.com/nav_font.html">免费字体</a></li>
-            <li><a href="https://iconpark.oceanengine.com/home">iconpark</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2">iconfont</a></li>
-            <li><a href="https://remixicon.com">remixicon</a></li>
-            <li><a href="https://www.logo123.com">LOGO123</a></li>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>协同工具</h2>
-            <li><a href="https://yueliu.cn/v20/#/login?redirect=%2Fproject%2FP221008001277908%2Flist">阅流</a></li>
-            <li><a href="https://web.gridea.dev/site">gridea写作</a></li>
-            <li><a href="https://shimo.im/loginByPassword?redirect_url=https%3A%2F%2Fshimo.im%2Fdesktop">石墨文档</a></li>
-            <li><a href="https://flbook.com.cn/">flbook作品集</a></li>
-            <li><a href="https://boardmix.cn/app/home">博思白板</a></li>
-            <li><a href="https://icity.ly/welcome">iCity</a></li>
-            <li><a href="https://pixso.cn/app/recent">Pixco协同设计</a></li>
-            <li><a href="https://js.design/workspace">即时设计</a></li>
-            <li><a href="https://www.figma.com/files">Figma</a></li>
-            <li><a href="https://modao.cc/workspace/me">墨刀</a></li>
-            <h6>脑机外挂</h6>
-            <li><a href="https://publish.obsidian.md/help-zh/
-                ">obsidian中文手册</a></li>
-            <li><a href="https://forum-zh.obsidian.md/">obsidian中文论坛</a></li>
-            <li><a href="https://withpinbox.com/login">pinbox</a></li>
-        </ul>
-    </div>
-    
-</div>
-
-<!-- 图片image -->
-<div id="tab1.5" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h6>无版权图片</h6>
-            <li><a href="https://www.pexels.com/zh-cn">Pexels</a></li>
-            <li><a href="https://unsplash.com">Unsplash</a></li>
-            <li><a href="https://pixabay.com">Pixabay</a></li>
-            <li><a href="https://picjumbo.com">Picjumbo</a></li>
-            <li><a href="https://stocksnap.io">Stocksnap</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.pickpik.com">Pickpik</a></li>
-            <li><a href="https://magdeleine.co">Magdeleine</a></li>
-            <li><a href="https://pngimg.com">Pngimg</a></li>
-            <li><a href="https://www.stickpng.com">Stickpng</a></li>
-            <li><a href="https://www.photock.asia">Photock</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://gratisography.com/?ref=nav.bossdesign.cn">Gratisograph</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>付费图片素材</h6>
-            <li><a href="https://699pic.com/best.html">摄图网</a></li>
-            <li><a href="https://www.nipic.com/index.html">昵图网</a></li>
-            <li><a href="https://www.88tph.com/">图品汇</a></li>
-            <li><a href="https://669pic.com/">万素网</a></li>
-            <li><a href="https://www.paixin.com/">拍信网</a></li>
-            <li><a href="http://www.tupian114.com/">图片114</a></li>
-            <li><a href="https://www.58pic.com/">千图网</a></li>
-            <li><a href="https://weili.ooopic.com/">我图网</a></li>
-            <li><a href="https://www.51miz.com/">觅知网</a></li>
-            <li><a href="https://www.51miz.com/">图虫网</a></li>
-            <li><a href="https://www.veer.com/?utm_source=shejidaren&utm_medium=banner&utm_campaign=201710_veer_coming&chid=8">Veer图库</a></li>
-            <li><a href="http://www.sccnn.com/">素材中国</a></li>
-            <li><a href="https://sucai.zhiyu.art/">知鱼素材</a></li>
-            <li><a href="https://818ps.com/">图怪兽</a></li>
-        </ul>
-    </div>
-    
-    <div class="class">
-        <ul>
-            <h6>在线识图</h6>
-            <li><a href="https://yandex.com/images/">Yandex</a></li>
-            <li><a href="https://www.wallpapermaiden.com">wallpaper</a></li>
-            <li><a href="https://wallhaven.cc">wallhaven</a></li>
-            <h6>像素风格生成</h6>
-            <li><a href="https://dotown.maeda-design-room.net/?from=thosefree.com">DOTOWN</a></li>
-            <li><a href="https://pixel-me.tokyo/en">Pixel-me</a></li>
-            <li><a href="http://pixeljoint.com">Pixeljoint</a></li>
-            <li><a href="https://www.pixilart.com">Pixilart</a></li>
-            <h6>其他图片效果</h6>
-            <li><a href="https://noisecreater.com/">噪波生成器</a></li>
-            <li><a href="https://photomosh.com/ ">photomosh故障图片</a></li>
-            <li><a href="http://thepatternlibrary.com/">无缝图片</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- 生活常用 -->
-<div id="tab2" class="content hidden">
-    <div class="class">
-        <ul>
-            <h2>视频追番</h2>
-            <li><a href="https://www.juji123.com">剧集之家</a></li>
-            <li><a href="https://www.80sgod.com">80S手机电影</a></li>
-            <li><a href="http://www.iyinghua.io">樱花动漫</a></li>
-            <li><a href="http://www.yhdmba.net">动漫H8</a></li>
-            <li><a href="https://www.tvn.cc">韩剧网</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://tel.dm5.com">动漫屋</a></li>
-            <li><a href="https://www.520meiju.cc/file/list40.html">520美剧</a></li>
-            <li><a href="https://v.qq.com">腾讯视频</a></li>
-            <li><a href="https://www.youku.com">优酷</a></li>
-            <li><a href="https://www.iqiyi.com">爱奇艺</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>网盘资源</h6>
-            <li><a href="https://www.ziyuanm.com">资源猫</a></li>
-            <li><a href="http://www.jisoupan.com/user">及搜盘</a></li>
-            <li><a href="https://pansoso.com/">盘搜搜</a></li>
-            <li><a href="https://clg4.clgapp1.xyz/oneindex.php">磁力狗</a></li>
-            <li><a href="https://www.videograbber.net">免费下载视频</a></li>
-            <li><a href="https://www.jijidown.com">唧唧B站下载</a></li>
-            <li><a href="https://cowtransfer.com">奶牛快传</a></li>
-            <li><a href="https://lanzou.com">蓝奏云</a></li>
-            <li><a href="https://wormhole.app">虫洞</a></li>
-            <li><a href="https://www.wenshushu.cn">文叔叔</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>Movies</h6>
-            <li><a href="https://www.mvcat.com">mvcat电影推荐</a></li>
-            <li><a href="https://www.maoyan.com">猫眼电影</a></li>
-            <li><a href="https://www.tunefind.com">tunefind</a></li>
-            <h6>动漫</h6>
-            <li><a href="https://acg17.com">ACG17</a></li>
-            <li><a href="https://comic.idmzj.com">动漫之家在线漫画</a></li>
-            <li><a href="https://kox.moe">KOX漫画资源</a></li>
-            <h6>music</h6>
-            <li><a href="http://www.impawards.com">impawards</a></li>
-            <li><a href="https://www.yinfans.me">音范丝</a></li>
-            <li><a href="https://music.163.com/?from=infinity">网易云音乐</a></li>
-            <li><a href="https://netease-music.fe-mm.com/#/music/playlist">MMplayer</a></li>
-            <li><a href="https://www.missevan.com">猫耳FM</a></li>
-            <li><a href="https://www.hifini.com">HiFi音乐</a></li>
-            <h6>摄影</h6>
-            <li><a href="https://photo.poco.cn">poco相机</a></li>
-            <li><a href="https://www.fengniao.com">蜂鸟网</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>电子书资源</h6>
-            <li><a href="https://pup6.yunzhan365.com/bookcase/jmyr/index.html">北大出版社</a></li>
-            <li><a href="http://www.dzkbw.com/">电子课本网</a></li>
-            <li><a href="https://www.loc.gov/collections/world-digital-library/about-this-collection/">世界数字图书馆</a></li>
-            <li><a href="http://www.banshujiang.cn/">搬书匠</a></li>
-            <li><a href="https://www.shuge.org/">书格</a></li>
-            <li><a href="https://www.kgbook.com/">苦瓜书盘</a></li>
-            <li><a href="https://book.sciencereading.cn/shop/main/Login/shopFrame.do">科学文库</a></li>
-            <li><a href="https://www.shuxiangjia.cn/">书享家</a></li>
-            <li><a href="https://koodo.960960.xyz/zh">koodo 免费开源电子阅读</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>考证提升</h6>
-            <li><a href="https://jxjy.baiyunu.edu.cn/html/cn/zsxx/510.html">白云学院成人本科</a></li>
-            <li><a href="https://www.zxxk.com/">学科网</a></li>
-            <li><a href="https://www.cltt.org/#/webHome" title="全国普通话水平测试">普通话水平测试</a></li>
-            <li><a href="http://www.pthxx.com/">普通话学习网</a></li>
-            <li><a href="https://www.chsi.com.cn/">学信网</a></li>
-            <li><a href="http://www.gdzcb.cc/index.html">广东专插本考试网</a></li>
-            <li><a href="https://www.aliyundrive.com/s/67EsUwwHRjj">张雪峰填志愿</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- 数码游戏 -->
-<div id="tab3" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h2>数码资讯</h2>
-            <li><a href="https://topic.expreview.com/CPU/">CPU天梯排行榜</a></li>
-            <li><a href="https://topic.expreview.com/GPU/">显卡天梯排行榜</a></li>
-            <li><a href="http://guozhivip.com/rank/">果汁排行榜</a></li>
-            <li><a href="https://sspai.com/?utm_source=infinitynewtab">少数派</a></li>
-            <li><a href="https://www.36kr.com">36氪</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.guokr.com">果壳</a></li>
-            <li><a href="https://www.ghxi.com/?utm_source=wetab">果核剥壳</a></li>
-            <li><a href="https://www.ifanr.com">爱范儿</a></li>
-            <li><a href="https://www.ithome.com">IT之家</a></li>
-            <li><a href="https://www.dgtle.com">数字尾巴</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.digitaling.com">数英</a></li>
-            <li><a href="https://topbook.cc/overview">Topbook</a></li>
-            <li><a href="https://www.rologo.com">标志共和国</a></li>
-            <li><a href="https://www.zol.com.cn">中关村在线</a></li>
-            <li><a href="https://www.jiemian.com">界面新闻</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.tech-girlz.com">塔科女子</a></li>
-            <li><a href="https://www.landiannews.com">蓝点网</a></li>
-            <li><a href="https://www.woshipm.com">人人都是产品经理</a></li>
-            <li><a href="https://shenmezhidedu.com/?from=wetab">什么值得读</a></li>
-            <li><a href="https://www.chinaz.com">站长之家</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>电脑</h2>
-            <li><a href="https://support.microsoft.com/zh-cn/windows">Window帮助</a></li>
-            <li><a href="https://support.microsoft.com/zh-cn/topic/%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0-2f9c1819-310d-48a7-ac12-25191269903c#WindowsVersion=Windows_11">window更新</a></li>
-            <li><a href="https://hellowindows.cn">hello windows</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>GAME资讯</h2>
-            <li><a href="https://www.vgchartz.com">游戏销量记录</a></li>
-            <li><a href="https://cowlevel.net/feed">奶牛关</a></li>
-            <li><a href="https://www.yystv.cn">游研社</a></li>
-            <li><a href="https://www.gcores.com">机核网</a></li>
-            <li><a href="http://www.ign.xn--fiqs8s">IGN中国版</a></li>
-            <li><a href="https://www.ali213.net">游侠网</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://indienova.com">indienova</a></li>
-            <li><a href="https://www.gamer.cn">磁场 GAMER</a></li>
-            <li><a href="https://www.vgtime.com/">游戏时光</a></li>
-            <li><a href="http://www.gamersky.com">游民星空</a></li>
-            <li><a href="https://psnine.com">PSN中文站</a></li>
-            
-        </ul>
-        <ul>
-            <li><a href="http://bbs.nga.cn">NGA玩家社区</a></li>
-            <li><a href="https://www.jufair.com/exhibition/600.html">聚展-China joy</a></li>
-            <li><a href="https://www.jufair.com/exhibition/578.html?bd_vid=11183909559101506822">聚展-德国科隆游戏展</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>游戏资源</h2>
-            <h6>免费</h6>
-            <li><a href="https://www.flysheep6.com">flysheep资源避难所</a></li>
-            <li><a href="http://821730880.ysepan.com">萌新单机之家-E盘</a></li>
-            <li><a href="https://mxdjzj.com">萌新单机之家-网页</a></li>
-            <li><a href="https://www.3dmgame.com">3dmgame</a></li>
-            <li><a href="http://www.3h3.com">当游网</a></li>
-            <h6>在线游戏</h6>
-            <li><a href="https://www.mhhf.com">灵动游戏</a></li>
-            <li><a href="https://poki.com/zh">poki在线游戏</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>攻略百科</h2>
-            <h6>维基综合</h6>
-            <li><a href="https://www.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5">灰机Wiki</a></li>
-            <li><a href="https://wiki.biligame.com/wiki/%E9%A6%96%E9%A1%B5">B站Wiki</a></li>
-            <h6>种田</h6>
-            <li><a href="https://zh.stardewvalleywiki.com/Stardew_Valley_Wiki">星露谷物语wiki</a></li>
-            <h6>手游</h6>
-            <li><a href="https://wiki.biligame.com/zspms/%E9%A6%96%E9%A1%B5?hmsr=%E6%B8%B8%E6%88%8F%E4%B8%AD%E5%BF%83&hmpl=&h">战双帕米什wiki</a></li>
-            <h6>3A单机</h6>
-            <li><a href="https://wiki.biligame.com/eldenring/%E9%A6%96%E9%A1%B5">艾尔登法环wiki</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>平台官网</h2>
-            <li><a href="https://store.steampowered.com">Steam</a></li>
-            <li><a href="https://store.epicgames.com/zh-CN">Epic Games</a></li>
-            <li><a href="https://www.nintendoswitch.com.cn">Switch</a></li>
-            <li><a href="https://www.xbox.com/zh-CN/consoles">X box</a></li>
-            <li><a href="https://store.playstation.com/zh-hant-hk/pages/ps5">Play Station</a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </div>
-    
-</div>
-
-<!-- 世界拓展 -->
-<div id="tab4" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h2>魔法工具箱</h2>
-            <li><a href="https://privacy.aiuys.com">手机绑定查询</a></li>
-            <li><a href="https://www.superbed.cn">聚合图床</a></li>
-            <li><a href="https://imgse.com">路过图床</a></li>
-            <li><a href="https://image.icu/">image图床</a></li>
-            <li><a href="https://www.jinyongci.com">禁用词查询</a></li>
-            <li><a href="https://www.qijishow.com/down/tools.html">奇迹秀工具</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://cn.office-converter.com/">Office文件转换</a></li>
-            <li><a href="https://www.shejidaren.com/examples/tools/golden-ratio/index.html">黄金比例计算</a></li>
-            <li><a href="https://dianshang.gaoding.com/tool/html/tool/pc2phone.html">淘宝PC链接转手机</a></li>
-            <li><a href="https://www.ginifab.com/feeds/angle_measurement/online_protractor.zh-cn.php">在线量角器</a></li>
-            <li><a href="http://www.atoolbox.net/Category.php?Id=33">计算换算</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.toolnb.com">爱资料工具</a></li>
-            <li><a href="https://tiomg.org/">太美工具网</a></li>
-            <li><a href="https://www.toolzl.com">在线工具箱</a></li>
-            <li><a href="https://receive-sms.cc">在线验证码</a></li>
-            <li><a href="https://tool.chinaz.com">站长工具 iP查询</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>软件下载</h2>
-            <li><a href="https://soft.macxf.com/">软件先锋</a></li>
-            <li><a href="https://www.hereitis.cn/">here it is资源</a></li>
-            <li><a href="https://zypuu.com">资源铺</a></li>
-            <li><a href="https://chrome.zzzmh.cn/#/index">极简插件</a></li>
-            <li><a href="https://extfans.com/">扩展迷</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.appinn.com/?utm_source=wetab">小众软件</a></li>
-            <li><a href="https://57cool.cool">57号同学</a></li>
-            <li><a href="https://www.macat.vip//">马克喵</a></li>
-            <li><a href="https://www.thosefree.com/">🎫那些免费的砖</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>科普知识</h2>
-            <h6>天文</h6>
-            <li><a href="https://www.meteorshowers.org/view/Lyrids">太阳系坐标</a></li>
-            <li><a href="https://www.720yun.com/t/eb42ejpvu1a?scene_id=365147">太阳系模拟</a></li>
-            <li><a href="http://thestarsetsociety.org/">星际协会</a></li>
-        </ul>
-        <ul>
-            <h6>气象</h6>
-            <li><a href="https://earth.nullschool.net/">地球气象观测</a></li>
-            <li><a href="http://typhoon.zjwater.gov.cn/wap.htm">台风实时路径</a></li>
-        </ul>
-        <ul>
-            <h6>医疗</h6>
-            <li><a href="https://www.msdmanuals.cn/#mission">默沙东诊疗手册</a></li>
-            <li><a href="https://www.mvyxws.com/">医学微视</a></li>
-        </ul>
-        <ul>
-            <h6>地理</h6>
-            <li><a href="https://www.skypixel.com/">天空之城</a></li>
-            <li><a href="https://www.earthol.com/">地球在线全景卫星地图</a></li>
-        </ul>
-        <ul>
-            <h6>人文历史</h6>
-            <li><a href="http://www.cbaigui.com/">纪妖</a></li>
-            <li><a href="https://g2.ltfc.net/home">中国珍宝箱</a></li>
-            <li><a href="https://www.allhistory.com/">全历史</a></li>
-            <li><a href="https://www.countryreports.org/countries/World.htm">国家百科</a></li>
-        </ul>
-        <ul>
-            <h6>科学</h6>
-            <li><a href="https://www.envisioningchemistry.cn">重现化学</a></li>
-        </ul>
-        <ul>
-            <h6>未分类</h6>
-            <li><a href="https://zh.wikipedia.org/zh-cn/">维基百科</a></li>
-            <li><a href="https://zh.wikipedia.org/zh-cn/">wolframalpha</a></li>
-            <li><a href="https://wiki.mbalib.com/wiki/Portal:%E8%AF%81%E5%88%B8">MBA智库</a></li>
-            <li><a href="https://fuun.fun">fuun.fun</a></li>
-            <li><a href="https://youquhome.com">有趣网址之家</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>独立个站</h2>
-            <li><a href="https://garryui.cn">卑微美工garryui</a></li>
-            <li><a href="https://2019.makemepulse.com">makemepulse</a></li>
-            <li><a href="https://moonsseer.lofter.com">lofter - moonsseer</a></li>
-            <li><a href="https://bairiyixiang39921.lofter.com/view">lofter - 白日臆想</a></li>
-            <li><a href="https://haiyangzhixin850.lofter.com/view">lofter - 海洋之鑫</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://kontai.lofter.com/view">lofter - 只需黎明</a></li>
-            <li><a href="https://house-map.cn/">地图搜租房</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- HTML代码 -->
-<div id="tab5" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h2>工具仓库</h2>
-            <li><a href="https://www.csdn.net">csdn</a></li>
-            <li><a href="https://github.com">github</a></li>
-            <li><a href="https://www.jianshu.com/">简书</a></li>
-            <li><a href="https://segmentfault.com/">思否</a></li>
-            <li><a href="https://www.oschina.net">开源中国</a></li>
-            <li><a href="https://gitee.com/explore">码云Gitee</a></li>
-            <li><a href="https://tool.lu/">程序员工具箱</a></li>
-            <li><a href="https://devdocs.io/">Devdocs</a></li>
-            <li><a href="http://www.fenby.com">Fenby</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>代码学习</h2>
-            <li><a href="https://www.runoob.com/">菜鸟教程</a></li>
-            <li><a href="https://www.w3school.com.cn">w3school</a></li>
-            <li><a href="https://www.51zxw.net/list.aspx?cid=380">JAVA基础</a></li>
-            <li><a href="https://www.icourse163.org">中国大学MOOC</a></li>
-            <li><a href="https://www.imooc.com">慕课网</a></li>
-            <li><a href="http://yun.itheima.com/">黑马程序员</a></li>
-            <li><a href="https://stu.ityxb.com/resources/list">传智教育</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>HTML样式</h2>
-            <li><a href="https://animista.net">animista</a></li>
-            <li><a href="https://ui.glass/generator">Glass Ui</a></li>
-            <li><a href="https://www.csswinner.com/?ref=nav.bossdesign.cn">csswinner</a></li>
-            <li><a href="http://augus.github.io/ngAnimate/">Augus</a></li>
-            <li><a href="https://animate.style/">animate</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://cccreate.co">cccreate</a></li>
-            <li><a href="https://uiverse.io">uiverse</a></li>
-            <li><a href="https://greasyfork.org/zh-CN">greasyfork</a></li>
-        </ul>
-    </div>
-</div>
-
-<!-- 翻墙VPN -->
-<div id="tab6" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h2>机场节点</h2>
-            <li><a href="https://52.mk">品云机场导航</a></li>
-            <li><a href="https://ybfl.xyz">ybfl 节点</a></li>
-            <li><a href="https://indecisive-aluminum-dda.notion.site/35f343bec8b2466d971f4a7dfded93a2">肆意科学</a></li>
-            <li><a href="https://merlinblog.xyz">Sabrina的万事屋</a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>墙外艺术世界</h2>
-            <li><a href="https://www.artstation.com">ArtStation</a></li>
-            <li><a href="https://www.pixiv.net">pixiv</a></li>
-            <li><a href="https://www.pinterest.com">Pinterest</a></li>
-            <li><a href="https://dribbble.com">Dribbble</a></li>
-            <li><a href="http://behance.com/bacosta">Behance</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>墙外新闻</h2>
-            <li><a href="https://www.youtube.com">YouTube</a></li>
-            <li><a href="https://twitter.com/i/trends">Twitter小蓝鸟</a></li>
-            <li><a href="https://discordapp.com/channels/@me">Discord</a></li>
-            <li><a href="https://tumblr.com">Tumblr</a></li>
-            <li><a href="https://www.facebook.com">facebook</a></li>
-            <li><a href="https://www.instagram.com/?hl=zh-tw">Instagram</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- 塔罗占卜 -->
-<div id="tab7" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h2>塔罗</h2>
-            <li><a href="https://p.taluo.com/">塔罗牌在线占卜</a></li>
-            <li><a href="https://www.xxwolo.com/tarots">星星在线塔罗牌</a></li>
-        </ul>
-    </div>
-</div>
-
-<!-- 三维建模 -->
-<div id="tab8" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h2>C4D相关资源</h2>
-            <h6>插件</h6>
-            <li><a href="http://www.modown.cn">魔顿网</a></li>
-            <li><a href="https://www.btbat.com">R站</a></li>
-            <li><a href="https://www.ansucai.com">AN素材库</a></li>
-            <li><a href="https://www.c4d.cn">C4D之家</a></li>
-            <li><a href="https://www.c4dcn.com">菜鸟C4D</a></li>
-            <li><a href="https://c4dco.com">一酷C4D</a></li>
-            <li><a href="http://iiidea.cn/">iiidea.cn</a></li>
-            <li><a href="https://cgexe.com/">可动程序</a></li>
-            <li><a href="https://www.aigei.com/">爱给网</a></li>
-            <li><a href="http://www.ltpmx.com/">立体派</a></li>
-            <h6>模型</h6>
-            <li><a href="https://sketchfab.com/feed">sketchfab</a></li>
-            <li><a href="https://www.turbosquid.com/">像素乌贼</a></li>
-            <li><a href="https://polyhaven.com/">polyhavenpol</a></li>
-            <li><a href="https://www.mixamo.com/#/">Mixamo</a></li>
-            <li><a href="https://www.cgmodel.com">CG模型网</a></li>
-            <h6>付费</h6>
-            <li><a href="https://www.znzmo.com">知末网</a></li>
-            <li><a href="https://www.3d66.com/" target="_blank">3D溜溜</a></li>
-            <li><a href="https://www.cgmol.com/" target="_blank">摩尔网</a></li>
-            <li><a href="https://mx.shejiben.com/" target="_blank">设计本</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>学习教育</h2>
-            <h6>资讯</h6>
-            <li><a href="https://www.element3ds.com"title="CG艺术创作分享平台">微元素</a></li>
-            <li><a href="https://www.ggac.com/v2/home"title="CG社区">GGAC</a></li>
-            <li><a href="https://www.dongfangxiangsu.com">东方像素</a></li>
-            <li><a href="https://www.surfcg.com/index?by=2title="title="伪冒A站">Surfcg</a></li>
-            <h6>教程</h6>
-            <li><a href="https://www.cger.com">CGER</a></li>
-            <li><a href="https://cgsociety.org">CGSociety</a></li>
-            <li><a href="https://www.cgjoy.com">CGjoy模型网</a></li>
-            <li><a href="https://www.cgjoy.com/train.php">CGJOY课堂</a></li>
-            <h6>机构</h6>
-            <li><a href="https://www.dcgart.cn">DCG建模学院</a></li>
-            <li><a href="https://www.thepersona.io">thepersona</a></li>
-            <li><a href="https://3dtotal.com/">3dtotal</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <!-- <h2>3D学习手册</h2> -->
-            <h6>Blender</h6>
-            <li><a href="https://blender.bgteach.com/">Blender中文手册</a></li>
-            <li><a href="https://www.blender.org/">Blender官方</a></li>
-            <li><a href="https://docs.blender.org/manual/zh-hans/2.93/index.html">Blender 2.93</a></li>
-            <h6>Unity</h6>
-            <li><a href="https://www.u3dchina.com/plugin.php?id=forum_index">Unity开发者联盟</a></li>
-            <li><a href="https://unity.cn/">UnityStore</a></li>
-            <h6>Cinema 4D</h6>
-            <li><a href="https://cineversity.maxon.net/zh">Cinema4D官方</a></li>
-            <li><a href="https://www.shuyishe.com/bookDetails?id=UB7218a28db05a4"title="新印象Octane for Cinema 4D渲染技术核心教程">数艺设</a></li>
-            <h6>游戏开发</h6>
-            <li><a href="https://docs.cocos.com/creator/manual/zh/getting-started/" >COCOS使用手册</a></li>
-            <li><a href="https://www.cocos.com/env"title="2D游戏开发引擎">COCOS游戏开发</a></li>
-            <li><a href="http://e.dangdang.com/media/h5/h5reader/index.html?id=1901304896&deviceType=h5&user_client=h5&channelId=70000#!">COCOS当当云阅读</a></li>
-            <li><a href="https://eva-engine.gitee.io/" >EVA.JS</a></li>
-            <li><a href="https://hxkj.vip/calendar/#/home">VUE3</a></li>
-            <h6>Zbrush</h6>
-            <li><a href="https://www.zbrushcentral.com/"title="VPN">zbrushcentra</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h6>UE</h6>
-            <li><a href="https://www.unrealengine.com/zh-CN/unreal-engine-5">虚幻引擎5</a></li>
-        </ul>
-    </div>
-</div>
-
-<!-- 大佬基地 -->
-<div id="tab9" class="content hidden">
-
-    <div class="class">
-        <ul>
-            <h2>主页合集</h2>
-            <li><a href="https://nav.bossdesign.cn">Boss设计</a></li>
-            <li><a href="https://hao.shenyecg.com/CG">深夜CG导航</a></li>
-            <li><a href="https://www.bookmarkearth.com">书签地球</a></li>
-            <li><a href="https://www.xuezha.cn">学渣网</a></li>
-            <li><a href="https://16map.com">一流导航</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.learnonly.xyz">Learnonly导航</a></li>
-            <li><a href="http://lackar.com/aa/">Anywhere</a></li>
-            <li><a href="http://so.uigreat.com">UI设计导航</a></li>
-            <li><a href="https://233heji.com">合集网</a></li>
-            <li><a href="https://www.seeseed.com/">Seeseed</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://creativemass.cn">CreativeMass</a></li>
-            <li><a href="https://idesign.qq.com/#!index/feed">腾讯设计导航</a></li>
-            <li><a href="https://hao.uisdc.com">优设导航</a></li>
-            <li><a href="https://chuangzaoshi.com">创造狮</a></li>
-            <li><a href="http://hao.shejidaren.com/index.html">设计导航</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.ubuuk.com">优波设计</a></li>
-            <li><a href="https://cooltools.top">cooltools</a></li>
-            <li><a href="https://it-gou.com">IT狗前端</a></li>
-            <li><a href="https://www.sjsdh.cn">搜奇导航</a></li>
-            <li><a href="https://www.965yy.cn">运营导航965</a></li>
-        </ul>
-        <ul>
-            <li><a href="https://www.hhdh.net">氢导航（新）</a></li>
-            <li><a href="https://www.7udh.com">柒导航</a></li>
-            <li><a href="https://www.jizhihezi.com/#term-130">集知盒子</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>导航</h2>
-            <li><a href="https://xydh.fun/">炫猿iLINK</a></li>
-            <li><a href="https://xydh.fun/chenyixi">以西笑嘻嘻</a></li>
-            <li><a href="https://xydh.fun/LouCX">LouCK</a></li>
-            <li><a href="https://xydh.fun/yyds007">人间萤火</a></li>
-            <li><a href="https://xydh.fun/yaoguai">妖怪青年</a></li>
-            <li><a href="https://xydh.fun/zcc">ZCC小站</a></li>
-            <li><a href="https://xydh.fun/pddxz">Climd</a></li>
-            <li><a href="https://xydh.fun/muggles">麻瓜的秘密补习班</a></li>
-            <li><a href="https://xydh.fun/echsfxy">二次寒树</a></li>
-            <li><a href="https://xydh.fun/zskkkhttps://xydh.fun/zskkk">学习小屋</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>Blog博客</h2>
-            <li><a href="https://www.wikimoe.com/">维基萌</a></li>
-            <li><a href="https://www.wikimoe.com/link.html">wikimoe博客</a></li>
-            <li><a href="https://y1xi.eu.org">以西的小窝</a></li>
-            <li><a href="https://akilar.top">Akilar糖果屋</a></li>
-            <li><a href="https://xiaoshuai.link">小帅同学</a></li>
-            <li><a href="https://zfe.space">小冰Blog</a></li>
-            <li><a href="https://www.antmoe.com">小康Blog</a></li>
-            <li><a href="https://notes.fe-mm.com">茂茂物语</a></li>
-            <li><a href="https://www.nite07.com">Nite07</a></li>
-            <li><a href="https://2heng.xin">樱花庄的白猫</a></li>
-            <li><a href="https://misakishiki.site/">栗木-空气力学先驱</a></li>
-            <li><a href="https://blog.badapple.pro/archives.html">东方幻梦</a></li>
-            <li><a href="https://meow3.family.blog/">恶魔菌の记事簿</a></li>
-        </ul>
-    </div>
-
-    <div class="class">
-        <ul>
-            <h2>元宇宙</h2>
-            <li><a href="https://virtualup.cn/#spark_homepage_slide" target="_blank">VUP虚拟形象</a></li>
-            <li><a href="https://www.thispersondoesnotexist.com">生成虚拟肖像</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- 艺术绘画 -->
-<div id="tab10" class="content">
-
-    <div class="class">
-        <ul>
-            <h6>绘画参考</h6>
-            <li><a href="https://screenmusings.org"title="练习氛围和光影的素材库">电影高清截图</a></li>
-            <li><a href="http://microsculpture.net"title="各种昆虫的微观照片的网站">昆虫微观照片</a></li>
-            <li><a href="https://www.bodiesinmotion.photo">人体动态姿势</a></li>
-            <li><a href="https://www.anyposes.com/">anyposes魔法人偶</a></li>
-            <li><a href="https://fotosketcher.com">照片转绘画风格</a></li>
-            <li><a href="https://seaside-station.com">海边车站场景</a></li>
-            <li><a href="https://www.yumeyakata.com">和服图案款式</a></li>
-            <li><a href="https://www.lolitawardrobe.com">lolita服饰参考</a></li>
-            <li><a href="https://www.e-dunhuang.com">数字敦煌</a></li>
-            <li><a href="https://ja.ukiyo-e.org">日本浮世绘</a></li>
-            <li><a href="https://markcordory.com">废土风格服装</a></li>
-            <h6>color</h6>
-            <li><a href="https://paletton.com/#uid=10G0u0kllllaFw0g0qFqFg0w0aF">色彩设计师</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </div>
-
-
-</div>
-
-<script>
-function openTab(evt, tabName) {
-    var i, content, tab;
-
-    // 获取所有内容元素和标签元素，将内容隐藏并取消标签的活动状态
-    content = document.getElementsByClassName("content");
-    for (i = 0; i < content.length; i++) {
-        content[i].classList.add("hidden");
-    }
-    tab = document.getElementsByClassName("tab");
-    for (i = 0; i < tab.length; i++) {
-        tab[i].classList.remove("active");
-    }
-
-    // 显示特定内容并激活特定标签
-    document.getElementById(tabName).classList.remove("hidden");
-    evt.currentTarget.classList.add("active");
-}
-
-function toggleSubcategory(id) {
-    var subcategory = document.getElementById(id);
-    subcategory.classList.toggle('active');
-}
-
-</script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, content, tabs;
+        
+            // 获取当前容器内的所有内容元素和标签元素，将内容隐藏并取消标签的活动状态
+            var parentContainer = evt.target.closest('.header');
+            content = parentContainer.getElementsByClassName("content");
+            for (i = 0; i < content.length; i++) {
+                content[i].classList.add("hidden");
+            }
+            tab = parentContainer.getElementsByClassName("tab");
+            for (i = 0; i < tab.length; i++) {
+                tab[i].classList.remove("active");
+            }
+        
+            // 显示特定内容并激活特定标签
+            document.getElementById(tabName).classList.remove("hidden");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
