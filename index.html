@@ -7,6 +7,9 @@
     <!-- <link rel="stylesheet" href="./css/index.css"> -->
     <link rel="shortcut icon" href="https://gd-hbimg.huaban.com/009803fa54d085a1395379760d71755017e6520d6a7-4GIwcM" type="image/x-icon">
     
+    <!-- 统一规定a标签新窗口打开 -->
+    <base target="_blank">
+
     <style>
         *{
     /* 內减模式 */
@@ -19,7 +22,9 @@
 
 body{
     background-color: #f3f5f7;
-    background-image: url(https://pic.imgdb.cn/item/65d458b89f345e8d03d63ae9.jpg);
+    /* background-image: url(https://pic.imgdb.cn/item/65d458b89f345e8d03d63ae9.jpg); */
+    /* 花瓣网图片链接 */
+    background-image: url(https://gd-hbimg.huaban.com/3ecaa479793395562ef06e60993e9cbd6d8d287a4ad5b-oHTtp2);
     background-repeat:no-repeat;
 
     /* 背景图片自适应大小 */
@@ -28,54 +33,95 @@ body{
 
 /* 标题 */
 
-h1{
-    margin-top: 30px;
-    font-size: 6ex;
-    color: #ffffff;
-    text-align: center;
-    letter-spacing: 30px;
-}
-
-/* 搜索框 */
-
-
-.found{
-    margin:50px;
-}
-
-form{
-    text-align: center;
-}
-form .text {
-    display: inline-block;
-    border: 0;
-    width: 260px;
-    height: 35px;
-    font-size: 14px;
-    outline: none;
-    border: 2px solid pink;
-}
-
-form .search {
-    
-    width: 90px;
-    height: 38px;
-    border: 2px solid rgb(255, 136, 156);
-    outline: none;
-    cursor: pointer;
-    /*   cursor: pointer;   鼠标悬停或点击时button时鼠标变成其他图标  */
-    text-align: center;
-    background-color: pink;
-    color: #FFFFFF;
-}
-
-/* 搜索框end */
-
 .center{
     width: 1400px;
     margin: 0 auto;
 }
 
+.center h1{
+    margin-top: 30px;
+    width: 1300px;
+    height: 150px;
+    font-size: 6ex;
+    color: #ffffff;
+    text-align: center;
+
+    /* 设置文字间距 */
+    letter-spacing: 30px;
+}
+.center h1 img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: -27px;
+}
+
+/* 搜索框 */
+.found{
+    text-align: center;
+}
+
+.bookslink{
+    /* display: inline-block; */
+    width: 200px;
+    height: 80px;
+    background-color: #fff;
+}
+
+.bookslink img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: center;
+    color: #f3f5f7;
+    font-size: 1ex;
+}
+
+#searchEngine {
+    /* 搜索引擎css */
+    border: 0;
+	width: 80px;
+	height: 35px;
+	font-size: 14px;
+    text-align: center;
+	outline: none;
+	border: 2px solid pink;
+    border-radius: 20px;
+    
+}
+
+#searchQuery{
+    /* 搜索框css */
+    display: inline-block;
+    border: 0;
+	width: 300px;
+	height: 38px;
+	font-size: 14px;
+    /* text-align: center; */
+	outline: none;
+	border: 3px solid pink;
+    border-radius: 20px;
+}
+
+#bottom搜索{
+    /* 搜索按钮css */
+    width: 90px;
+	height: 38px;
+	border: 2px solid pink;
+	outline: none;
+	cursor: pointer;
+	/*   cursor: pointer;   鼠标悬停或点击时button时鼠标变成其他图标  */
+	text-align: center;
+	background-color: #6c3725;
+	color: #FFFFFF;
+    border-radius: 20px;
+}
+
+/* 搜索框end */
+
+
+/* 书架css */
 .tittle{
     margin: 30px auto;
     width: 1400px;
@@ -163,23 +209,54 @@ h3{
 .hidden {
     display: none;
 }
-    </style>
-    
-    <!-- 统一规定a标签新窗口打开 -->
-    <base target="_blank">
 
+.bottom{
+    margin: 30px auto;
+    width: 1400px;
+    height: 100px;
+    background-color: rgba(56, 56, 56, 0.3);
+    border-radius: 20px;
+}
+
+.bottom .booktext{
+    width: 1400px;
+    height: 100px;
+    background-color: rgba(56, 56, 56, 0.3);
+    border-radius: 20px;
+}
+    </style>
 </head>
 <body>
 <div class="center">
 
-    <h1>女巫魔法笔记</h1>
-        <div class="found">
-            <form target="_blank" method="get" action="https://cn.bing.com/search?">
-                <input type="text" placeholder="请输入关键词" name="word" class="text" />
-                <input type="submit" value="必应" class="search">
-            </form>
-		</div>
+    <!-- 大标题 -->
+    <h1>
+        <img src="https://gd-hbimg.huaban.com/43007cd436e815d26b8761b4889c9393f93f9f94a502-PJvVvP" alt="">
+        女巫魔法笔记
+    </h1>
 
+
+    <!-- 搜索框 -->
+    <div class="found">
+        <div class="bookslink">
+            <a href="https://www.yuque.com/aemptyz/design"><img src="https://gd-hbimg.huaban.com/f4883064cca48f5ae5c52848402b254f03449e0199b-kMF2Tg_fw1200webp" alt="">视觉设计</i></a>
+        </div>
+        
+        <form id="searchForm" target="_blank">
+            <select id="searchEngine">
+                    <option value="https://www.bing.com/search?q=">必应</option>
+                    <option value="https://www.google.com/search?q=">Google</option>
+                    <option value="https://www.baidu.com/s?wd=">百度</option>
+                    <option value="https://search.bilibili.com/all?keyword=">B站</option>
+                    <!-- Add more search engines here -->
+            </select>
+            <!-- 关闭搜索框记录历史 加上autocomplete="off"即可 -->
+                <input type="text" id="searchQuery" placeholder="  真正要做的事连神明都不要讲" autocomplete="off">
+                <button type="submit" id="bottom搜索">搜索</button>
+        </form>
+	</div>
+
+    <!-- 网址链接 -->
     <div class="tittle">
 
         <a href="https://www.bilibili.com"><img src="https://gd-hbimg.huaban.com/f93285b25895da7a8e37307305347eaf99d2ca741102-PGD8XE_fw1200webp" alt="">Bilibili</i></a>
@@ -200,23 +277,30 @@ h3{
 
         <a href="https://www.apple.com.cn"><img src="https://gd-hbimg.huaban.com/890a845f4669b59d31a599063b235ce25f1f61b2487-2yrk2F_fw1200webp" alt="">Apple</i></a>
 
-        <a href="https://555dyy10.com"><img src="https://gd-hbimg.huaban.com/d4b3a84d245d6bade1396336f14a6014cb2d08505bc-scAoWU_fw1200webp" alt="">555电影</i></a>
+        <a href="https://555dyy10.com"><img src="https://gd-hbimg.huaban.com/be5c66d5482e5210376c50333e6bf5d141d8ed981d4d7d-Q6zdGm_fw658" alt="">555电影</i></a>
 
         <a href="https://www.taobao.com"><img src="https://gd-hbimg.huaban.com/93d1d93b7fc6394e8424ec6adfcae45ed74b3b2645d-PPXUWH_fw1200webp" alt="">淘宝</i></a>
 
         <a href="https://pan.baidu.com/disk/main?from=homeFlow#/index?category=all"><img src="https://gd-hbimg.huaban.com/3846d2784acbcf4f9010630cfdd2662ca2c7fc96329-ek47v1_fw1200webp" alt="">百度网盘</i></a>
 
-        <a href="1"><img src="" alt="">-</i></a>
-        <a href="1"><img src="" alt="">-</i></a>
-        <a href="1"><img src="" alt="">-</i></a>
-        <a href="1"><img src="" alt="">-</i></a>
+        <a href="https://www.notion.so/Notion-0a0bc6bf314f41d183aecc39b9b6e462"><img src="https://gd-hbimg.huaban.com/72b8cc994b5cd4e64ac1f1882bd23de1fb229b5c382-aaXyrO_fw1200webp" alt="">Notion</i></a>
         
+        <a href="https://chatgpt.com"><img src="https://gd-hbimg.huaban.com/30a1a258a55af3bff39ffcac98547a158bc2b025f3f7-fHPI6C" alt="">Chatgpt</i></a>
+        
+        <a href="https://metaso.cn/"><img src="https://gd-hbimg.huaban.com/f7a017feaa27fac07ab05519babf47ae6fc0bea0266-rMo42Y_fw1200webp" alt="">秘塔Ai</i></a>
+        
+        <a href="https://flowus.cn/fd2af920-a702-40c9-bd94-57184240c3cc"><img src="https://gd-hbimg.huaban.com/dd7f851a5b7dae59a5dce429230ea07b12a2e5ef550-EeiT4j_fw1200webp" alt="">🔑账密</i></a>
+
+        <a href="https://www.yuque.com/dashboard"><img src="https://gd-hbimg.huaban.com/5204049ae46961e3e12eff66db7e67b1de095177328-aB77Zd_fw1200webp" alt="">语雀</i></a>
+
+        <a href="https://www.artstation.com"><img src="https://gd-hbimg.huaban.com/f30e49e017a03317b1dcc8423690ed8e84821a1c1bf-k3Wltc_fw1200webp" alt="">ArtStation</i></a>
+
+        <a href="https://www.youtube.com"><img src="https://gd-hbimg.huaban.com/825ff860bcb9ad0d63256a0bc21b47bd13d0caf2824-KdIe7r_fw1200webp" alt="">YouTube</i></a>
+
+        <a href="https://www.miyoushe.com/ys"><img src="https://gd-hbimg.huaban.com/0c20281e0cf6e160f524162546a5f45a8903135ca61-pqUJdF_fw1200webp" alt="">米游社</i></a>
         
     </div>
-
-
-    <!-- 网址链接 -->
-
+    
     <!-- 每日必看 -->
     <div class="header">
         <h3>每日必看</h3>
@@ -271,7 +355,7 @@ h3{
                     <li><a href="https://www.jijidown.com">唧唧B站下载</a></li>
                     <li><a href="https://cowtransfer.com">奶牛快传</a></li>
                     <li><a href="https://lanzou.com">蓝奏云</a></li>
-                    <li><a href="https://wormhole.app">虫洞</a></li>
+                    <li><a href="https://wormhole.app" title="端对端传输文件">虫洞</a></li>
                     <li><a href="https://www.wenshushu.cn">文叔叔</a></li>
                 </ul>
             </div>
@@ -291,7 +375,7 @@ h3{
             <div class="links">
                 <ul>
                     <li><a href="https://www.gzlib.org.cn/">📚广州图书馆</a></li></ul>
-                    <li><a href="http://www.sci-hub.ren">sci-hub</a></li>
+                    <li><a href="http://www.sci-hub.ren"title="获取信息是一项人权">sci-hub</a></li>
                     <li><a href="http://xs.3822808.com/">谷歌学术镜像</a></li>
                     <li><a href="https://www.scihub.net.cn/">科研学术导航</a></li>
                     <li><a href="https://www.nppa.gov.cn/bsfw/jggs/yxspjg/">国家新闻出版署</a></li>
@@ -302,8 +386,6 @@ h3{
         <div id="tab1-6" class="content hidden">
             <div class="links">
                 <ul>
-                    <li><a href="https://metaso.cn/">秘塔Ai搜索</a></li>
-                    <li><a href="https://chatgpt.com/">👍Chatgpt</a></li>
                     <li><a href="https://domore.ai/tools/clipdrop.co" title="Ai图片工具">clipdrop</a></li>
                     <li><a href="https://kaifa.baidu.com/">开发者搜索</a></li>
                 </ul>
@@ -313,9 +395,6 @@ h3{
         <div id="tab1-7" class="content hidden">
             <div class="links">
                 <ul>
-                    <li><a href="https://www.notion.so/Notion-0a0bc6bf314f41d183aecc39b9b6e462">Notion</a></li>
-                    <li><a href="https://www.yuque.com/dashboard">语雀</a></li>
-                    <li><a href="https://flowus.cn/fd2af920-a702-40c9-bd94-57184240c3cc">🔑账密</a></li></ul>
             </div>
         </div>
 
@@ -410,9 +489,9 @@ h3{
             <div class="links">
                 <ul>
                     <li><a href="https://yueliu.cn/v20/#/login?redirect=%2Fproject%2FP221008001277908%2Flist">阅流</a></li>
-                    <li><a href="https://web.gridea.dev/site">gridea写作</a></li>
+                    <li><a href="https://web.gridea.dev/site" title="写作是不被打扰的最佳谈话方式。—— 儒勒-雷纳德">gridea写作</a></li>
                     <li><a href="https://shimo.im/loginByPassword?redirect_url=https%3A%2F%2Fshimo.im%2Fdesktop">石墨文档</a></li>
-                    <li><a href="https://flbook.com.cn/">flbook作品集</a></li>
+                    <li><a href="https://flbook.com.cn/" title="电子书本制作">flbook作品集</a></li>
                     <li><a href="https://boardmix.cn/app/home">博思白板</a></li>
                     <li><a href="https://icity.ly/welcome">iCity</a></li>
                     <li><a href="https://pixso.cn/app/recent">Pixco协同设计</a></li>
@@ -619,6 +698,7 @@ h3{
                     <li><a href="https://yandex.com/images/">Yandex</a></li>
                     <li><a href="https://www.wallpapermaiden.com">wallpaper</a></li>
                     <li><a href="https://wallhaven.cc">wallhaven</a></li>
+                    <li><a href="https://smallseotools.com/zh/reverse-image-search/">在线识图Tools</a></li>
                 </ul>
             </div>
         </div>
@@ -761,15 +841,14 @@ h3{
                     <li><a href="https://xn--mesr8b36x.art/#/login">大机场魔法</a></li>
                     <li><a href="https://52.mk">品云机场导航</a></li>
                     <li><a href="https://ybfl.xyz">ybfl 节点</a></li>
-                    <li><a href="https://indecisive-aluminum-dda.notion.site/35f343bec8b2466d971f4a7dfded93a2">肆意科学</a></li>
-                    <li><a href="https://merlinblog.xyz">Sabrina的万事屋</a></li>
+                    <li><a href="https://indecisive-aluminum-dda.notion.site/35f343bec8b2466d971f4a7dfded93a2" title="✈︎梯子">肆意科学</a></li>
+                    <li><a href="https://merlinblog.xyz" title="✈︎梯子">Sabrina的万事屋</a></li>
                 </ul>
             </div>
         </div>
         <div id="tab6-2" class="content hidden">
             <div class="links">
                 <ul>
-                    <li><a href="https://www.artstation.com">ArtStation</a></li>
                     <li><a href="https://www.pixiv.net">pixiv</a></li>
                     <li><a href="https://www.pinterest.com">Pinterest</a></li>
                     <li><a href="https://dribbble.com">Dribbble</a></li>
@@ -779,7 +858,6 @@ h3{
         <div id="tab6-3" class="content">
             <div class="links">
                 <ul>
-                    <li><a href="https://www.youtube.com">YouTube</a></li>
                     <li><a href="https://twitter.com/i/trends">Twitter小蓝鸟</a></li>
                     <li><a href="https://discordapp.com/channels/@me">Discord</a></li>
                     <li><a href="https://tumblr.com">Tumblr</a></li>
@@ -842,7 +920,6 @@ h3{
                     <li><a href="https://wiki.biligame.com/eldenring/%E9%A6%96%E9%A1%B5">艾尔登法环wiki</a></li>
                     <li><a href="https://www.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5">灰机Wiki</a></li>
                     <li><a href="https://wiki.biligame.com/wiki/%E9%A6%96%E9%A1%B5">B站Wiki</a></li>
-                    <li><a href="https://www.miyoushe.com/ys">米游社</a></li>
                     <li><a href="https://webstatic.mihoyo.com/ys/app/interactive-map/index.html?bbs_presentation_style=no_header&lang">提瓦特地图</a></li>
                     <li><a href="https://wiki.biligame.com/ys/%E9%A6%96%E9%A1%B5">原神wiki</a></li>
                     <li><a href="https://cocogoat.work/achievement">椰羊成就</a></li>
@@ -1134,12 +1211,12 @@ h3{
             <div class="links">
                 <ul>
                     <li><a href="https://animista.net">animista</a></li>
-                    <li><a href="https://ui.glass/generator">Glass Ui</a></li>
+                    <li><a href="https://ui.glass/generator" title="玻璃效果">Glass Ui</a></li>
                     <li><a href="https://www.csswinner.com/?ref=nav.bossdesign.cn">csswinner</a></li>
                     <li><a href="http://augus.github.io/ngAnimate/">Augus</a></li>
                     <li><a href="https://animate.style/">animate</a></li>
                     <li><a href="https://cccreate.co">cccreate</a></li>
-                    <li><a href="https://uiverse.io">uiverse</a></li>
+                    <li><a href="https://uiverse.io" title="前端开发人员必备CSS按钮插件">uiverse</a></li>
                     <li><a href="https://greasyfork.org/zh-CN">greasyfork</a></li>
                     <li><a href="https://www.bossdesign.cn/animista/">boss设计推荐</a></li>
                 </ul>
@@ -1191,7 +1268,7 @@ h3{
                 <ul>
                     <li><a href="https://www.mvcat.com">mvcat电影推荐</a></li>
                     <li><a href="https://www.maoyan.com">猫眼电影</a></li>
-                    <li><a href="https://www.tunefind.com">tunefind</a></li>
+                    <li><a href="https://www.tunefind.com" title="电影原声"></a></li>
                 </ul>
             </div>
         </div>
@@ -1199,7 +1276,7 @@ h3{
         <div id="tab11-2" class="content hidden">
             <div class="links">
                 <ul>
-                    <li><a href="http://www.impawards.com">impawards</a></li>
+                    <li><a href="http://www.impawards.com" title="电影海报">impawards</a></li>
                     <li><a href="https://www.yinfans.me">音范丝</a></li>
                     <li><a href="https://music.163.com/?from=infinity">网易云音乐</a></li>
                     <li><a href="https://netease-music.fe-mm.com/#/music/playlist">MMplayer</a></li>
@@ -1320,6 +1397,7 @@ h3{
 
     </div>
 
+
     <!-- <div class="header">
         <h3>-</h3>
         <div class="tabs">
@@ -1361,6 +1439,18 @@ h3{
             // 显示特定内容并激活特定标签
             document.getElementById(tabName).classList.remove("hidden");
             evt.currentTarget.classList.add("active");
+        }
+
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var query = document.getElementById("searchQuery").value;
+            var selectedEngine = document.getElementById("searchEngine").value;
+            search(selectedEngine, query);
+        });
+
+        function search(engine, query) {
+            var searchUrl = engine + encodeURIComponent(query);
+            window.open(searchUrl, "_blank");
         }
     </script>
 </body>
