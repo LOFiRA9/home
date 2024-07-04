@@ -45,7 +45,7 @@ body{
 /* 知识书架 */
 .bookslink{
     /* display: inline-block; */
-    width: 200px;
+    width: 500px;
     height: 30px;
     /* background-color: #fff; */
     line-height: 40px;
@@ -76,8 +76,8 @@ body{
 	font-size: 14px;
     text-align: center;
 	outline: none;
-	border: 2px solid pink;
-    border-radius: 20px;
+	border: 0px solid rgb(105, 105, 105);
+    border-radius: 5px;
     
 }
 
@@ -86,13 +86,13 @@ body{
     /* 搜索框css */
     display: inline-block;
     border: 0;
-	width: 300px;
+	width: 350px;
 	height: 38px;
 	font-size: 14px;
     /* text-align: center; */
 	outline: none;
-	border: 3px solid pink;
-    border-radius: 20px;
+	border: 0px solid rgb(105, 105, 105);
+    border-radius: 5px;
 }
 
 #bottom搜索{
@@ -100,14 +100,14 @@ body{
     /* 搜索按钮css */
     width: 90px;
 	height: 38px;
-	border: 2px solid pink;
+	border: 1px solid rgb(105, 105, 105);
 	outline: none;
 	cursor: pointer;
 	/*   cursor: pointer;   鼠标悬停或点击时button时鼠标变成其他图标  */
 	text-align: center;
-	background-color: #6c3725;
+	background-color: rgba(56, 56, 56, 0.1);
 	color: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 /* 图标网站 */
