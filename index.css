@@ -148,6 +148,13 @@ div .links{
     display: block;
     border: 1px dashed #4b4b4b;
     border-radius: 20px;
+    overflow:auto;
+}
+
+/* 设置滚动条样式 */
+div .links::-webkit-scrollbar{
+    width: 1px; /*  设置纵轴（y轴）轴滚动条 */
+    height: 1px; /*  设置横轴（x轴）轴滚动条 */
 }
 
 h3{
