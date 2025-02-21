@@ -15,7 +15,7 @@ body{
     background-image: url(./images/witch.jpg);
     background-repeat:no-repeat;
     background-attachment: fixed;
-    /* width: 100%; */
+    width: auto;
     /* 背景图片自适应大小 */
     background-size:cover;
 }
