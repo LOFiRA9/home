@@ -59,7 +59,7 @@ body{
     height: 45px;
     float: left;
     text-align: center;
-    color: #f3f5f7;
+    color: #28bee4;
     font-size: 1ex;
 }
 
@@ -79,11 +79,6 @@ body{
 	outline: none;
 	border: 0px solid rgb(105, 105, 105);
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(255, 173, 153, 0.7), 
-                0 0 20px rgba(255, 191, 141, 0.7), 
-                0 0 30px rgba(255, 230, 210, 0.7), 
-                0 0 40px rgba(254, 180, 123, 0.7), 
-                0 0 40px rgba(234, 167, 255, 0.7);
     
 }
 
@@ -94,23 +89,23 @@ body{
     padding: 13px;
     border: 0;
 	width: 350px;
-	height: 13px;
+	height: 12px;
 	font-size: 13px;
 	outline: none;
-	border: 0px solid rgb(61, 61, 61);
+	border: 0px solid rgb(36, 36, 36);
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(255, 173, 153, 0.7), 
-                0 0 20px rgba(255, 191, 141, 0.7), 
-                0 0 30px rgba(255, 230, 210, 0.7), 
-                0 0 40px rgba(254, 180, 123, 0.7), 
-                0 0 40px rgba(234, 167, 255, 0.7);
+    box-shadow: 0 0 10px rgba(255, 173, 153, 0.3), 
+                0 0 15px rgba(255, 191, 141, 0.3), 
+                0 0 20px rgba(255, 230, 210, 0.3), 
+                0 0 25px rgba(254, 180, 123, 0.3), 
+                0 0 35px rgba(234, 167, 255, 0.3);
 }
 
 #bottom搜索{
 
     /* 搜索按钮css */
     width: 90px;
-	height: 38px;
+	height: 35px;
 	border: 1px solid rgb(105, 105, 105);
 	outline: none;
 	cursor: pointer;
@@ -119,11 +114,11 @@ body{
 	background-color: rgba(56, 56, 56, 0.1);
 	color: #FFFFFF;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(255, 173, 153, 0.7), 
-                0 0 20px rgba(255, 191, 141, 0.7), 
-                0 0 30px rgba(255, 230, 210, 0.7), 
-                0 0 40px rgba(254, 180, 123, 0.7), 
-                0 0 40px rgba(234, 167, 255, 0.7);
+    box-shadow: 0 0 10px rgba(255, 173, 153, 0.3), 
+                0 0 15px rgba(255, 191, 141, 0.3), 
+                0 0 20px rgba(255, 230, 210, 0.3), 
+                0 0 25px rgba(254, 180, 123, 0.3), 
+                0 0 35px rgba(234, 167, 255, 0.3);
 }
 
 /* 图标网站 */
@@ -133,6 +128,11 @@ body{
     height: 100px;
     background-color: rgba(56, 56, 56, 0.3);
     border-radius: 20px;
+    box-shadow: 0 0 3px rgba(255, 173, 153, 0.7), 
+                0 0 5px rgba(255, 191, 141, 0.7), 
+                0 0 10px rgba(255, 230, 210, 0.7), 
+                0 0 12px rgba(254, 180, 123, 0.7), 
+                0 0 13px rgba(234, 167, 255, 0.7);
 }
 
 .tittle img{
