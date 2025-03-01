@@ -78,22 +78,32 @@ body{
     text-align: center;
 	outline: none;
 	border: 0px solid rgb(105, 105, 105);
-    border-radius: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 173, 153, 0.7), 
+                0 0 20px rgba(255, 191, 141, 0.7), 
+                0 0 30px rgba(255, 230, 210, 0.7), 
+                0 0 40px rgba(254, 180, 123, 0.7), 
+                0 0 40px rgba(234, 167, 255, 0.7);
     
 }
 
 #searchQuery{
 
     /* 搜索框css */
-    display: inline-block;
+    /* display: inline-block; */
+    padding: 13px;
     border: 0;
 	width: 350px;
-	height: 38px;
-	font-size: 14px;
-    /* text-align: center; */
+	height: 13px;
+	font-size: 13px;
 	outline: none;
-	border: 0px solid rgb(105, 105, 105);
-    border-radius: 5px;
+	border: 0px solid rgb(61, 61, 61);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 173, 153, 0.7), 
+                0 0 20px rgba(255, 191, 141, 0.7), 
+                0 0 30px rgba(255, 230, 210, 0.7), 
+                0 0 40px rgba(254, 180, 123, 0.7), 
+                0 0 40px rgba(234, 167, 255, 0.7);
 }
 
 #bottom搜索{
@@ -108,7 +118,12 @@ body{
 	text-align: center;
 	background-color: rgba(56, 56, 56, 0.1);
 	color: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 173, 153, 0.7), 
+                0 0 20px rgba(255, 191, 141, 0.7), 
+                0 0 30px rgba(255, 230, 210, 0.7), 
+                0 0 40px rgba(254, 180, 123, 0.7), 
+                0 0 40px rgba(234, 167, 255, 0.7);
 }
 
 /* 图标网站 */
