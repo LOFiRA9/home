@@ -23,13 +23,13 @@ body{
 /* 标题 */
 
 .center{
-    width: 1400px;
+    width: 1450px;
     margin: 0 auto;
 }
 
 .center h1{
     margin-top: 30px;
-    width: 1300px;
+    width: 1450px;
     height: 150px;
     font-size: 6ex;
     color: #ffffff;
@@ -47,7 +47,7 @@ body{
 /* 知识书架 */
 .bookslink{
     /* display: inline-block; */
-    width: 1400px;
+    width: 1450px;
     height: 50px;
     /* background-color: #fff; */
     line-height: 40px;
@@ -123,8 +123,9 @@ body{
 
 /* 图标网站 */
 .tittle{
-    margin: 30px auto;
-    width: 1400px;
+    
+    margin: 25px auto;
+    width: 1450px;
     height: 100px;
     background-color: rgba(56, 56, 56, 0.3);
     border-radius: 20px;
@@ -152,9 +153,10 @@ body{
 }
 
 .header{
+    align-items: center;
     float: left;
     position: relative;
-    margin: 5px;
+    margin: 8px;
     
 }
 
@@ -224,14 +226,14 @@ h3{
 
 .bottom{
     margin: 30px auto;
-    width: 1400px;
+    width: 1450px;
     height: 100px;
     background-color: rgba(56, 56, 56, 0.3);
     border-radius: 20px;
 }
 
 .bottom .booktext{
-    width: 1400px;
+    width: 1450px;
     height: 100px;
     background-color: rgba(56, 56, 56, 0.3);
     border-radius: 20px;
